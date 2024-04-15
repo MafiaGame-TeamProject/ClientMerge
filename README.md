@@ -28,7 +28,7 @@
             <td><img src="https://avatars.githubusercontent.com/u/106204894?v=4" width="120"/></td>
         </tr>
         <tr>
-            <td style="text-align:center;">Project총괄, PM팀장, BE</td>
+            <td style="text-align:center;">PM팀장, BE</td>
             <td style="text-align:center;">BE팀장</td>
             <td style="text-align:center;">Design팀장, FE</td>
             <td style="text-align:center;">FE팀장</td>
