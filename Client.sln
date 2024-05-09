@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormClient", "Client\WinFormClient.csproj", "{74D7912F-9AF5-4450-940C-A974E42F8796}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatLib", "..\ChatLib\ChatLib.csproj", "{A4340430-F639-4A99-A039-4B3ABD51E395}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatLib", "..\library\ChatLib.csproj", "{A4340430-F639-4A99-A039-4B3ABD51E395}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
