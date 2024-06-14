@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "yDGsXqA0ycNwnVfLMQKNgUGejCcbTa0zPKQG1mrr+sCNHii0uJilswGlgZG3sbayyogHzS7xZICap6nLCRaX2w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gifou\\LiarDemo\\client\\Client\\WinFormClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gifou\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.18\\microsoft.windowsdesktop.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\gifou\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.18\\microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\gifou\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.18\\microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\gifou\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.18\\microsoft.netcore.app.host.win-x64.7.0.18.nupkg.sha512"
+  ],
+  "logs": []
+}
