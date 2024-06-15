@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net7.0-windows7.0": {
+      "Krypton.Toolkit/80.24.3.64": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows7.0/Krypton.Toolkit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows7.0/Krypton.Toolkit.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
       "ChatLib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -15,6 +31,38 @@
     }
   },
   "libraries": {
+    "Krypton.Toolkit/80.24.3.64": {
+      "sha512": "E1lxbKLD56r2LCyNbjTaQH6RVBdPr01jApXAYjJHcfs9mz6+52/LLsZkOmeqPBZ4Jq+zy5JzrW//I/kb12RNDA==",
+      "type": "package",
+      "path": "krypton.toolkit/80.24.3.64",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Krypton Stable.png",
+        "License.md",
+        "README.md",
+        "krypton.toolkit.80.24.3.64.nupkg.sha512",
+        "krypton.toolkit.nuspec",
+        "lib/net462/Krypton.Toolkit.dll",
+        "lib/net462/Krypton.Toolkit.xml",
+        "lib/net47/Krypton.Toolkit.dll",
+        "lib/net47/Krypton.Toolkit.xml",
+        "lib/net471/Krypton.Toolkit.dll",
+        "lib/net471/Krypton.Toolkit.xml",
+        "lib/net472/Krypton.Toolkit.dll",
+        "lib/net472/Krypton.Toolkit.xml",
+        "lib/net48/Krypton.Toolkit.dll",
+        "lib/net48/Krypton.Toolkit.xml",
+        "lib/net481/Krypton.Toolkit.dll",
+        "lib/net481/Krypton.Toolkit.xml",
+        "lib/net6.0-windows7.0/Krypton.Toolkit.dll",
+        "lib/net6.0-windows7.0/Krypton.Toolkit.xml",
+        "lib/net7.0-windows7.0/Krypton.Toolkit.dll",
+        "lib/net7.0-windows7.0/Krypton.Toolkit.xml",
+        "lib/net8.0-windows7.0/Krypton.Toolkit.dll",
+        "lib/net8.0-windows7.0/Krypton.Toolkit.xml"
+      ]
+    },
     "ChatLib/1.0.0": {
       "type": "project",
       "path": "../../library/ChatLib.csproj",
@@ -23,23 +71,24 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
-      "ChatLib >= 1.0.0"
+      "ChatLib >= 1.0.0",
+      "Krypton.Toolkit >= 80.24.3.64"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gifou\\.nuget\\packages\\": {}
+    "C:\\Users\\ibsun\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gifou\\LiarDemo\\client\\Client\\WinFormClient.csproj",
+      "projectUniqueName": "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\ClientMerge\\Client\\WinFormClient.csproj",
       "projectName": "WinFormClient",
-      "projectPath": "C:\\Users\\gifou\\LiarDemo\\client\\Client\\WinFormClient.csproj",
-      "packagesPath": "C:\\Users\\gifou\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gifou\\LiarDemo\\client\\Client\\obj\\",
+      "projectPath": "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\ClientMerge\\Client\\WinFormClient.csproj",
+      "packagesPath": "C:\\Users\\ibsun\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\ClientMerge\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gifou\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ibsun\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +102,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\gifou\\LiarDemo\\library\\ChatLib.csproj": {
-              "projectPath": "C:\\Users\\gifou\\LiarDemo\\library\\ChatLib.csproj"
+            "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\library\\ChatLib.csproj": {
+              "projectPath": "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\library\\ChatLib.csproj"
             }
           }
         }
@@ -73,6 +122,12 @@
     "frameworks": {
       "net7.0-windows7.0": {
         "targetAlias": "net7.0-windows",
+        "dependencies": {
+          "Krypton.Toolkit": {
+            "target": "Package",
+            "version": "[80.24.3.64, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -84,24 +139,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.18, 7.0.18]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[7.0.18, 7.0.18]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.18, 7.0.18]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.18, 7.0.18]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -110,7 +147,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

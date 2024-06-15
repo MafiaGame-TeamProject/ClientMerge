@@ -5,7 +5,24 @@
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v7.0": {}
+    ".NETCoreApp,Version=v7.0": {
+      "Krypton.Toolkit/80.24.3.64": {
+        "runtime": {
+          "lib/net7.0-windows7.0/Krypton.Toolkit.dll": {
+            "assemblyVersion": "80.24.3.64",
+            "fileVersion": "80.24.3.64"
+          }
+        }
+      }
+    }
   },
-  "libraries": {}
+  "libraries": {
+    "Krypton.Toolkit/80.24.3.64": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-E1lxbKLD56r2LCyNbjTaQH6RVBdPr01jApXAYjJHcfs9mz6+52/LLsZkOmeqPBZ4Jq+zy5JzrW//I/kb12RNDA==",
+      "path": "krypton.toolkit/80.24.3.64",
+      "hashPath": "krypton.toolkit.80.24.3.64.nupkg.sha512"
+    }
+  }
 }

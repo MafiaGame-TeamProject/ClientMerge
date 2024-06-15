@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Krypton.Toolkit" Version="80.24.3.64" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\library\ChatLib.csproj" />
   </ItemGroup>
 

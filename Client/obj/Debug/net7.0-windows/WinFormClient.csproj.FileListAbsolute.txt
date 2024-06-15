@@ -20,3 +20,28 @@ C:\Users\gifou\LiarDemo\client\Client\obj\Debug\net7.0-windows\WinFormClient.pdb
 C:\Users\gifou\LiarDemo\client\Client\obj\Debug\net7.0-windows\WinFormClient.genruntimeconfig.cache
 C:\Users\gifou\LiarDemo\client\Client\obj\Debug\net7.0-windows\ref\WinFormClient.dll
 C:\Users\gifou\LiarDemo\client\Client\obj\Debug\net7.0-windows\WinFormClient.Properties.Resources.resources
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.exe
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.deps.json
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.runtimeconfig.json
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.dll
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.pdb
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\ChatLib.dll
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\ChatLib.pdb
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.csproj.AssemblyReference.cache
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.Properties.Resources.resources
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.csproj.GenerateResource.cache
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.AssemblyInfoInputs.cache
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.AssemblyInfo.cs
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.csproj.CoreCompileInputs.cache
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.sourcelink.json
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormC.158B3305.Up2Date
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.dll
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\refint\WinFormClient.dll
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.pdb
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.genruntimeconfig.cache
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\ref\WinFormClient.dll
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.Init_form.resources
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\SuggestedWord.suggestWord_form.resources
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WaitingRoom.waitingRoom_form.resources
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\Krypton.Toolkit.dll

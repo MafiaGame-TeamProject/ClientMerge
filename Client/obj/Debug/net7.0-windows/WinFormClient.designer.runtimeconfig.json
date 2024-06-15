@@ -12,7 +12,7 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\gifou\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ibsun\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\gifou\\.nuget\\packages"
     ],
     "configProperties": {
