@@ -47,6 +47,12 @@ namespace WinFormClient
 
         private async void BtnConnect_Click(object? sender, EventArgs e)
         {
+            if (txtName.Text == string.Empty)
+            {
+                MessageBox.Show("이름을 입력해주세요.");
+                return;
+            }
+
             await _client.ConnectAsync(new ConnectionDetails
             {
                 RoomId = RoomId,

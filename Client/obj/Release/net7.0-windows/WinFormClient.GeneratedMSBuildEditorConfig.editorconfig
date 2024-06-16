@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WinFormClient
-build_property.ProjectDir = C:\Users\gifou\LiarDemo\client\Client\
+build_property.ProjectDir = C:\Users\gifou\LiarDemo\ClientMerge\Client\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
