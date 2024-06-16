@@ -14,6 +14,7 @@ using ChatLib.Models;
 using ChatLib.Sockets;
 using WinFormClient;
 using System.Net;
+using ChatLib.Events;
 
 namespace WaitingRoom
 {
@@ -22,6 +23,9 @@ namespace WaitingRoom
         System.Windows.Forms.Label[] labels;
 
         private ClientRoomManager _roomManager;
+        
+        public List<ClientHandler> newList = new();
+        private static int RoomId;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -34,6 +38,10 @@ namespace WaitingRoom
 
             int people_num = 1;
 
+            Room_lbl.Text = RoomId.ToString();
+
+            for (int i = 0; i < labels.Length; i++)
+                labels[i].Text = "";
 
             for (int i = 0; i < 4; i++)
             {
@@ -43,6 +51,20 @@ namespace WaitingRoom
                 labels[i].Left = (UsersView.Width - labels[i].Width) / 2 - 20;
                 labels[i].Top = UsersView.Top + 20 + (i*(labels[i].Height+26));
             }
+
+            
+            newList = _roomManager.RoomUser(RoomId);
+
+            if (newList != null)
+            {
+                for (int i = 0; i < newList.Count; i++)
+                {
+                    if (newList[i].InitialData.UserName != string.Empty)
+                    {
+                        labels[i].Text = newList[i].InitialData.UserName;
+                    }
+                }
+            }
         }
 
         private void kryptonPictureBox1_Click(object sender, EventArgs e)
@@ -50,15 +72,24 @@ namespace WaitingRoom
 
         }
 
-        public void UserInfo(int roomId, string userName)
+        public void UserInfo(int roomId)
         {
-            // List newList = _roomManager.RoomUser(roomId);
+            
+            
+            
+            
+            RoomId = roomId;
+
+           
         }
 
         public waitingRoom_form()
         {
             InitializeComponent();
             _roomManager = new ClientRoomManager();
+            
+
+
         }
     }
 }
