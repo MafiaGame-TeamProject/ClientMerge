@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.timer = new System.Windows.Forms.Timer(this.components);
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            timer = new System.Windows.Forms.Timer(components);
+            SuspendLayout();
             // 
-            // Form1
+            // suggestWord_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = global::WinFormClient.Properties.Resources.제시어_분배__1_;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(120F, 120F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackgroundImage = WinFormClient.Properties.Resources.제시어_분배__1_;
+            BackgroundImageLayout = ImageLayout.Zoom;
+            ClientSize = new Size(800, 450);
+            DoubleBuffered = true;
+            ForeColor = SystemColors.ControlText;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(2);
+            Name = "suggestWord_form";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Form1";
+            FormClosed += suggestWord_form_FormClosed;
+            Load += Form1_Load;
+            ResumeLayout(false);
         }
 
         #endregion

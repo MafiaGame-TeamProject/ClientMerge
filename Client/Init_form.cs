@@ -6,6 +6,7 @@ using System.Net;
 using System.Windows.Forms;
 using Krypton.Toolkit;
 using WaitingRoom;
+using SuggestedWord;
 
 namespace WinFormClient
 {
@@ -67,12 +68,24 @@ namespace WinFormClient
                     waitingRoomForm.UserInfo(RoomId, users);
                     waitingRoomForm.Show();
                     waitingRoomForm.FormClosing += waitingRoom_form_FormClosing;
-                    this.Hide(); // 현재 폼을 숨김
+                    this.Hide();
                 }
                 else
                 {
                     waitingRoomForm.UserInfo(RoomId, users);
                 }
+            }
+
+            // WORD 메시지를 수신하면 suggestWord_form으로 전환
+            if (hub.Message.StartsWith("WORD:"))
+            {
+                var word = hub.Message.Substring("WORD:".Length);
+                BeginInvoke((MethodInvoker)delegate
+                {
+                    var suggestWordForm = new suggestWord_form(_client, word);
+                    suggestWordForm.Show();
+                    waitingRoomForm.Hide();
+                });
             }
 
             
@@ -102,7 +115,12 @@ namespace WinFormClient
         private void waitingRoom_form_FormClosing(object sender, FormClosingEventArgs e)
         {
             _client.Close();
-            this.Show(); // Init_form을 다시 표시
+            this.Close();
+        }
+        private void suggestWord_form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _client.Close();
+            this.Close();
         }
     }
 }

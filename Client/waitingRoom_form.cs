@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 using ChatLib.Sockets;
 using SuggestedWord;
@@ -15,12 +14,14 @@ namespace WaitingRoom
         private List<string> newList = new();
         private static int RoomId;
         private ChatClient _client;
+        private string _word;
 
         public waitingRoom_form(ChatClient client)
         {
             InitializeComponent();
             _client = client;
             labels = new Label[] { name1_lbl, name2_lbl, name3_lbl, name4_lbl };
+            _client.Received += Client_Received;
         }
 
         public void UserInfo(int roomId, List<string> users)
@@ -43,14 +44,20 @@ namespace WaitingRoom
             {
                 labels[i].Text = newList[i];
             }
+        }
 
-            
-            if(newList.Count == 4)
+        private void Client_Received(object sender, ChatLib.Events.ChatEventArgs e)
+        {
+            var hub = e.Hub;
+            if (hub.Message.StartsWith("WORD:"))
             {
-                var suggestWordForm = new suggestWord_form(_client);
-                suggestWordForm.Show();
-                this.Hide();
-
+                _word = hub.Message.Substring("WORD:".Length);
+                BeginInvoke((MethodInvoker)delegate
+                {
+                    var suggestWordForm = new suggestWord_form(_client, _word);
+                    suggestWordForm.Show();
+                    this.Hide();
+                });
             }
         }
 
@@ -63,7 +70,6 @@ namespace WaitingRoom
 
             for (int i = 0; i < labels.Length; i++)
             {
-                
                 labels[i].Parent = UsersView;
                 labels[i].BackColor = Color.Transparent;
                 labels[i].ForeColor = Color.White;
