@@ -16,6 +16,7 @@ namespace WinFormClient
         private int RoomId => (int)nudRoomId.Value;
         private string UserName => txtName.Text;
 
+        waitingRoom_form waitingRoom_Form = new waitingRoom_form();
 
         private void RunningStateChanged(bool isRunning)
         {
@@ -38,18 +39,17 @@ namespace WinFormClient
             ChatHub hub = e.Hub;
             string message = hub.State switch
             {
-                ChatState.Connect => $"{hub.UserName}¥‘¿Ã ¡¢º”«œø¥Ω¿¥œ¥Ÿ.",
-                ChatState.Disconnect => $"{hub.UserName}¥‘¿Ã ¡æ∑·«œø¥Ω¿¥œ¥Ÿ.",
+                ChatState.Connect => $"{hub.UserName}ÎãòÏù¥ Ïó∞Í≤∞ÌïòÏòÄÏäµÎãàÎã§.",
+                ChatState.Disconnect => $"{hub.UserName}ÎãòÏù¥ Ïó∞Í≤∞ÏùÑ ÎÅäÏóàÏäµÎãàÎã§.",
                 _ => $"{hub.UserName}: {hub.Message}"
             };
-
         }
 
         private async void BtnConnect_Click(object? sender, EventArgs e)
         {
             if (txtName.Text == string.Empty)
             {
-                MessageBox.Show("¿Ã∏ß¿ª ¿‘∑¬«ÿ¡÷ººø‰.");
+                MessageBox.Show("Ïù¥Î¶ÑÏùÑ ÏûÖÎ†•Ìï¥Ï£ºÏÑ∏Ïöî.");
                 return;
             }
 
@@ -58,7 +58,7 @@ namespace WinFormClient
                 RoomId = RoomId,
                 UserName = UserName,
             });
-            waitingRoom_form waitingRoom_Form = new waitingRoom_form();
+            waitingRoom_Form.UserInfo(RoomId, UserName);
             waitingRoom_Form.ShowDialog();
         }
 
