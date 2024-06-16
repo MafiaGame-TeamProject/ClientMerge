@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\ClientMerge\\Client\\WinFormClient.csproj": {}
+    "C:\\Users\\gifou\\LiarDemo\\ClientMerge\\Client\\WinFormClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\ClientMerge\\Client\\WinFormClient.csproj": {
+    "C:\\Users\\gifou\\LiarDemo\\ClientMerge\\Client\\WinFormClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\ClientMerge\\Client\\WinFormClient.csproj",
+        "projectUniqueName": "C:\\Users\\gifou\\LiarDemo\\ClientMerge\\Client\\WinFormClient.csproj",
         "projectName": "WinFormClient",
-        "projectPath": "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\ClientMerge\\Client\\WinFormClient.csproj",
-        "packagesPath": "C:\\Users\\ibsun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\ClientMerge\\Client\\obj\\",
+        "projectPath": "C:\\Users\\gifou\\LiarDemo\\ClientMerge\\Client\\WinFormClient.csproj",
+        "packagesPath": "C:\\Users\\gifou\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gifou\\LiarDemo\\ClientMerge\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ibsun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gifou\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\library\\ChatLib.csproj": {
-                "projectPath": "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\library\\ChatLib.csproj"
+              "C:\\Users\\gifou\\LiarDemo\\library\\ChatLib.csproj": {
+                "projectPath": "C:\\Users\\gifou\\LiarDemo\\library\\ChatLib.csproj"
               }
             }
           }
@@ -65,6 +65,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -73,21 +91,21 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\library\\ChatLib.csproj": {
+    "C:\\Users\\gifou\\LiarDemo\\library\\ChatLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\library\\ChatLib.csproj",
+        "projectUniqueName": "C:\\Users\\gifou\\LiarDemo\\library\\ChatLib.csproj",
         "projectName": "ChatLib",
-        "projectPath": "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\library\\ChatLib.csproj",
-        "packagesPath": "C:\\Users\\ibsun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ibsun\\OneDrive\\바탕 화면\\APP\\library\\obj\\",
+        "projectPath": "C:\\Users\\gifou\\LiarDemo\\library\\ChatLib.csproj",
+        "packagesPath": "C:\\Users\\gifou\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gifou\\LiarDemo\\library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ibsun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gifou\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -128,12 +146,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }
