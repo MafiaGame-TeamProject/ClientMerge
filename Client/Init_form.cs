@@ -1,9 +1,10 @@
 using ChatLib.Handlers;
 using ChatLib.Models;
 using ChatLib.Sockets;
+using System.Linq;
 using System.Net;
+using System.Windows.Forms;
 using Krypton.Toolkit;
-using SuggestedWord;
 using WaitingRoom;
 
 namespace WinFormClient
@@ -12,12 +13,24 @@ namespace WinFormClient
     {
         public static ChatClient _client;
         private ClientHandler? _clientHandler;
-        
+        private waitingRoom_form waitingRoomForm;
 
         private int RoomId => (int)nudRoomId.Value;
         private string UserName => txtName.Text;
 
-        waitingRoom_form waitingRoom_Form = new waitingRoom_form();
+        public Init_form()
+        {
+            InitializeComponent();
+
+            _client = new ChatClient(IPAddress.Parse("127.0.0.1"), 8080);
+            _client.Connected += Connected;
+            _client.Disconnected += Disconnected;
+            _client.Received += Received;
+            _client.RunningStateChanged += RunningStateChanged;
+
+            btnConnect.Click += BtnConnect_Click;
+            btnStop.Click += BtnStop_Click;
+        }
 
         private void RunningStateChanged(bool isRunning)
         {
@@ -42,9 +55,26 @@ namespace WinFormClient
             {
                 ChatState.Connect => $"{hub.UserName}님이 연결하였습니다.",
                 ChatState.Disconnect => $"{hub.UserName}님이 연결을 끊었습니다.",
-                
                 _ => $"{hub.UserName}: {hub.Message}"
             };
+
+            if (hub.Message.StartsWith("USER_LIST:"))
+            {
+                var users = hub.Message.Substring("USER_LIST:".Length).Split(',').ToList();
+                if (waitingRoomForm == null || waitingRoomForm.IsDisposed)
+                {
+                    waitingRoomForm = new waitingRoom_form(_client);
+                    waitingRoomForm.UserInfo(RoomId, users);
+                    waitingRoomForm.Show();
+                    waitingRoomForm.FormClosing += waitingRoom_form_FormClosing;
+                    this.Hide(); // 현재 폼을 숨김
+                }
+                else
+                {
+                    waitingRoomForm.UserInfo(RoomId, users);
+                }
+            }
+
             
         }
 
@@ -56,23 +86,11 @@ namespace WinFormClient
                 return;
             }
 
-            
-
-           
-
             await _client.ConnectAsync(new ConnectionDetails
             {
                 RoomId = RoomId,
                 UserName = UserName,
             });
-
-            
-
-            // 초기화 완료 후 폼 전환
-            var waitingRoomForm = new waitingRoom_form();
-            waitingRoomForm.UserInfo(RoomId);
-            waitingRoomForm.Show();
-            this.Hide(); // 현재 폼을 숨김
         }
 
         private void BtnStop_Click(object? sender, EventArgs e)
@@ -81,20 +99,10 @@ namespace WinFormClient
             this.Close();
         }
 
-        public Init_form()
+        private void waitingRoom_form_FormClosing(object sender, FormClosingEventArgs e)
         {
-            InitializeComponent();
-
-            
-            _client = new ChatClient(IPAddress.Parse("127.0.0.1"), 8080);
-            _client.Connected += Connected;
-            _client.Disconnected += Disconnected;
-            _client.Received += Received;
-            _client.RunningStateChanged += RunningStateChanged;
-
-            btnConnect.Click += BtnConnect_Click;
-            btnStop.Click += BtnStop_Click;
-
+            _client.Close();
+            this.Show(); // Init_form을 다시 표시
         }
     }
 }

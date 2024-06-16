@@ -20,9 +20,7 @@ C:\Users\gifou\LiarDemo\client\Client\obj\Debug\net7.0-windows\WinFormClient.pdb
 C:\Users\gifou\LiarDemo\client\Client\obj\Debug\net7.0-windows\WinFormClient.genruntimeconfig.cache
 C:\Users\gifou\LiarDemo\client\Client\obj\Debug\net7.0-windows\ref\WinFormClient.dll
 C:\Users\gifou\LiarDemo\client\Client\obj\Debug\net7.0-windows\WinFormClient.Properties.Resources.resources
-C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.exe
 C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.deps.json
-C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.runtimeconfig.json
 C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.dll
 C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.pdb
 C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\ChatLib.dll
@@ -39,12 +37,10 @@ C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-wi
 C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.dll
 C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\refint\WinFormClient.dll
 C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.pdb
-C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.genruntimeconfig.cache
 C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\ref\WinFormClient.dll
 C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.Init_form.resources
 C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\SuggestedWord.suggestWord_form.resources
 C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WaitingRoom.waitingRoom_form.resources
-C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\Krypton.Toolkit.dll
 C:\Users\gifou\LiarDemo\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.exe
 C:\Users\gifou\LiarDemo\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.deps.json
 C:\Users\gifou\LiarDemo\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.runtimeconfig.json
@@ -70,3 +66,7 @@ C:\Users\gifou\LiarDemo\ClientMerge\Client\obj\Debug\net7.0-windows\refint\WinFo
 C:\Users\gifou\LiarDemo\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.pdb
 C:\Users\gifou\LiarDemo\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.genruntimeconfig.cache
 C:\Users\gifou\LiarDemo\ClientMerge\Client\obj\Debug\net7.0-windows\ref\WinFormClient.dll
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.exe
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.runtimeconfig.json
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\Krypton.Toolkit.dll
+C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.genruntimeconfig.cache

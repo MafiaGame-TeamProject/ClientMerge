@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection.Emit;
+using ChatLib.Sockets;
 
 namespace SuggestedWord
 {
@@ -31,6 +32,8 @@ namespace SuggestedWord
         private System.Windows.Forms.Label Ment_lbl;
         private Krypton.Toolkit.KryptonPictureBox SuggestPB;
 
+        private ChatClient _client;
+
         System.Windows.Forms.Label[] CardLable;
 
         // 카드 크기 설정
@@ -41,10 +44,12 @@ namespace SuggestedWord
         private readonly int sgtWidth = 104 / 2;
         private readonly int sgtHeight = 119 / 2;
 
-        public suggestWord_form()
+        public suggestWord_form(ChatClient client)
         {
+            _client = client;
             InitializeComponent();
             InitializeCardFlipComponents();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -1,95 +1,85 @@
-﻿
-using Krypton.Toolkit;
+﻿using Krypton.Toolkit;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ChatLib.Handlers;
-using ChatLib.Models;
 using ChatLib.Sockets;
-using WinFormClient;
-using System.Net;
-using ChatLib.Events;
+using SuggestedWord;
 
 namespace WaitingRoom
 {
     public partial class waitingRoom_form : KryptonForm
     {
-        System.Windows.Forms.Label[] labels;
-
-        private ClientRoomManager _roomManager;
-        
-        public List<ClientHandler> newList = new();
+        private System.Windows.Forms.Label[] labels;
+        private List<string> newList = new();
         private static int RoomId;
+        private ChatClient _client;
+
+        public waitingRoom_form(ChatClient client)
+        {
+            InitializeComponent();
+            _client = client;
+            labels = new Label[] { name1_lbl, name2_lbl, name3_lbl, name4_lbl };
+        }
+
+        public void UserInfo(int roomId, List<string> users)
+        {
+            newList = users;
+            RoomId = roomId;
+            UpdateLabels();
+        }
+
+        private void UpdateLabels()
+        {
+            Room_lbl.Text = "Room " + RoomId.ToString();
+
+            for (int i = 0; i < labels.Length; i++)
+            {
+                labels[i].Text = "";
+            }
+
+            for (int i = 0; i < newList.Count && i < labels.Length; i++)
+            {
+                labels[i].Text = newList[i];
+            }
+
+            
+            if(newList.Count == 4)
+            {
+                var suggestWordForm = new suggestWord_form(_client);
+                suggestWordForm.Show();
+                this.Hide();
+
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             Room_lbl.Parent = UsersView;
             Room_lbl.BackColor = Color.Transparent;
             Room_lbl.Left = (UsersView.Width - Room_lbl.Width) / 2;
-            Room_lbl.Top = UsersView.Height/50;
-
-            labels = new Label[] {name1_lbl,name2_lbl, name3_lbl, name4_lbl};
-
-            int people_num = 1;
-
-            Room_lbl.Text = RoomId.ToString();
+            Room_lbl.Top = UsersView.Height / 50;
 
             for (int i = 0; i < labels.Length; i++)
-                labels[i].Text = "";
-
-            for (int i = 0; i < 4; i++)
             {
+                
                 labels[i].Parent = UsersView;
                 labels[i].BackColor = Color.Transparent;
                 labels[i].ForeColor = Color.White;
                 labels[i].Left = (UsersView.Width - labels[i].Width) / 2 - 20;
-                labels[i].Top = UsersView.Top + 20 + (i*(labels[i].Height+26));
-            }
-
-            
-            newList = _roomManager.RoomUser(RoomId);
-
-            if (newList != null)
-            {
-                for (int i = 0; i < newList.Count; i++)
-                {
-                    if (newList[i].InitialData.UserName != string.Empty)
-                    {
-                        labels[i].Text = newList[i].InitialData.UserName;
-                    }
-                }
+                labels[i].Top = UsersView.Top + 20 + (i * (labels[i].Height + 26));
             }
         }
 
         private void kryptonPictureBox1_Click(object sender, EventArgs e)
         {
-
         }
 
-        public void UserInfo(int roomId)
+        private void waitingRoom_form_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
-            
-            
-            
-            RoomId = roomId;
-
-           
-        }
-
-        public waitingRoom_form()
-        {
-            InitializeComponent();
-            _roomManager = new ClientRoomManager();
-            
-
-
+            // 클라이언트 연결 종료
+            _client.Close();
         }
     }
 }

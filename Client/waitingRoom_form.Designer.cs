@@ -138,12 +138,13 @@
             Controls.Add(Room_lbl);
             Controls.Add(UsersView);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(2);
             Name = "waitingRoom_form";
             Padding = new Padding(2, 40, 2, 2);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            FormClosed += waitingRoom_form_FormClosed;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)UsersView).EndInit();
             ResumeLayout(false);
