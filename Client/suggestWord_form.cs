@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using ChatLib.Handlers;
@@ -30,14 +31,14 @@ namespace SuggestedWord
         private string _userName;
         private List<string> _words;
         private ChattingForm _chattingForm;
-       
+
 
         System.Windows.Forms.Label[] CardLable;
 
-        private readonly int cardWidth = 321 / 2;
-        private readonly int cardHeight = 512 / 2;
-        private readonly int sgtWidth = 104 / 2;
-        private readonly int sgtHeight = 119 / 2;
+        private readonly int cardWidth = 321;
+        private readonly int cardHeight = 512;
+        private readonly int sgtWidth = 104;
+        private readonly int sgtHeight = 119;
 
         public static class ImageManager
         {
@@ -75,7 +76,7 @@ namespace SuggestedWord
             // word2 : 시민 제시어 [3]
             // liarName : 라이어 이름 [5]
             _chattingForm = chattingForm;
-            
+
             InitializeCardFlipComponents();
         }
 
@@ -99,31 +100,34 @@ namespace SuggestedWord
 
             SuggestedWordType_lbl = new System.Windows.Forms.Label
             {
-                Text = "주제 : 직업",
+                Text = "주제 : " + _words[1],
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.FromArgb(255, 209, 154),
-                Location = new Point(50, 10)
+                Location = new Point(570, 113),
+                Font = new Font("휴먼둥근헤드라인", 11)
             };
 
             SugestedWord_lbl = new System.Windows.Forms.Label
             {
-                Text = _words[2],
+                Text = _words[4],
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.Black,
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(60, 190)
+                Location = new Point(594, 494),
+                Font = new Font("휴먼둥근헤드라인", 11)
+
             };
 
             Explanation_lbl = new System.Windows.Forms.Label
             {
-                Text = "당신의 제시어는 " + _words[2] + "입니다.",
+                Text = "당신의 제시어는 " + _words[4] + "입니다.",
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.FromArgb(255, 209, 154),
-                Location = new Point(15, 215),
-                Font = new Font(Name, 7),
+                Location = new Point(490, 548),
+                Font = new Font("휴먼둥근헤드라인", 7),
                 TextAlign = ContentAlignment.MiddleCenter,
             };
 
@@ -133,8 +137,8 @@ namespace SuggestedWord
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.White,
-                Location = new Point(35, 230),
-                Font = new Font(Name, 6),
+                Location = new Point(522, 575),
+                Font = new Font("휴먼둥근헤드라인", 6),
                 TextAlign = ContentAlignment.MiddleCenter,
             };
 
@@ -152,15 +156,15 @@ namespace SuggestedWord
                 Height = sgtHeight,
                 Image = ImageManager.SuggestedPicture,
                 SizeMode = PictureBoxSizeMode.StretchImage,
-                Location = new Point(53, 85)
+                Location = new Point(590, 277)
             };
 
             for (int i = 0; i < CardLable.Length; i++)
             {
-                CardPB.Controls.Add(CardLable[i]);
+                this.Controls.Add(CardLable[i]); // CardPB 대신 Form에 추가
                 CardLable[i].Visible = false;
             }
-            CardPB.Controls.Add(SuggestPB);
+            this.Controls.Add(SuggestPB); // CardPB 대신 Form에 추가
             SuggestPB.Visible = false;
 
             timer = new System.Windows.Forms.Timer();
@@ -202,9 +206,11 @@ namespace SuggestedWord
                     CardPB.Image = ImageManager.CardBack;
                     for (int i = 0; i < CardLable.Length; i++)
                     {
-                        CardLable[i].Visible = true;
+                        CardLable[i].BringToFront(); // 라벨을 맨 앞으로 가져옴
+                        CardLable[i].Visible = true; // 라벨을 보이게 설정
                     }
-                    SuggestPB.Visible = true;
+                    SuggestPB.BringToFront(); // 이미지 박스를 맨 앞으로 가져옴
+                    SuggestPB.Visible = true; // 이미지 박스를 보이게 설정
                     timer.Stop();
                     return;
                 }

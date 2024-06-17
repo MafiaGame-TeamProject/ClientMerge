@@ -49,7 +49,7 @@
             DoubleBuffered = true;
             ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "suggestWord_form";
             StartPosition = FormStartPosition.CenterParent;
             Text = "MafiaGame";
