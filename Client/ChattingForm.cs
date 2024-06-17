@@ -17,8 +17,8 @@ namespace WinFormClient
         ClientHandler _clientHandler;
         string _userName;
 
-        private int m = 3;
-        private int s = 0;
+        private int m = 0;
+        private int s = 30;
 
         public ChattingForm(ChatClient client, ClientHandler handler, string userName)
         {
@@ -26,8 +26,6 @@ namespace WinFormClient
             _client = client;
             _clientHandler = handler;
             _userName = userName;
-
-            gTimer.Start();
         }
 
         // 메시지를 보내는 메서드
@@ -85,7 +83,7 @@ namespace WinFormClient
 
         private void ChattingForm_Load(object sender, EventArgs e)
         {
-
+            gTimer.Start();
         }
     }
 }

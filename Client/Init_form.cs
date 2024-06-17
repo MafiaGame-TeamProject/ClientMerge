@@ -16,7 +16,8 @@ namespace WinFormClient
         public static ChatClient? _client;
         private ClientHandler? _clientHandler;
         private waitingRoom_form waitingRoomForm;
-        private ChattingForm chattingForm;
+        private ChattingForm chattingForm; 
+        private string liarAnswer;
 
         private int RoomId => (int)nudRoomId.Value;
         private string UserName => txtName.Text;
@@ -44,7 +45,7 @@ namespace WinFormClient
         private void Connected(object? sender, ChatLib.Events.ChatEventArgs e)
         {
             _clientHandler = e.ClientHandler;
-            chattingForm = new ChattingForm(_client, _clientHandler, UserName);
+            chattingForm = new ChattingForm(_client, _clientHandler, UserName); // chattingForm instance 생성
         }
 
         private void Disconnected(object? sender, ChatLib.Events.ChatEventArgs e)
@@ -100,6 +101,13 @@ namespace WinFormClient
                 {
                     chattingForm.AddOtherChat(msgArr[1], msgArr[0]);
                 }
+            }
+
+            // 서버에서 라이어 제시어를 받을 때
+            if (hub.Message.StartsWith("ANSWERWORD:"))
+            {
+                var answer = hub.Message.Substring("ANSWERWORD:".Length);
+                this.liarAnswer = answer;
             }
         }
 

@@ -53,17 +53,21 @@
             // 
             // labelScreen
             // 
-            resources.ApplyResources(labelScreen, "labelScreen");
             labelScreen.BackColor = Color.Transparent;
             labelScreen.ForeColor = Color.White;
+            labelScreen.Location = new Point(0, 0);
             labelScreen.Name = "labelScreen";
+            labelScreen.Size = new Size(100, 23);
+            labelScreen.TabIndex = 7;
             // 
             // timeLabel
             // 
-            resources.ApplyResources(timeLabel, "timeLabel");
             timeLabel.BackColor = Color.Transparent;
             timeLabel.ForeColor = Color.White;
+            timeLabel.Location = new Point(0, 0);
             timeLabel.Name = "timeLabel";
+            timeLabel.Size = new Size(100, 23);
+            timeLabel.TabIndex = 6;
             // 
             // timer1
             // 
@@ -72,20 +76,26 @@
             // pictureBoxTime
             // 
             pictureBoxTime.BackColor = Color.Transparent;
-            resources.ApplyResources(pictureBoxTime, "pictureBoxTime");
+            pictureBoxTime.Image = (Image)resources.GetObject("pictureBoxTime.Image");
+            pictureBoxTime.Location = new Point(0, 0);
             pictureBoxTime.Name = "pictureBoxTime";
+            pictureBoxTime.Size = new Size(100, 50);
+            pictureBoxTime.TabIndex = 4;
             pictureBoxTime.TabStop = false;
             // 
             // pictureBoxSun
             // 
             pictureBoxSun.BackColor = Color.Transparent;
-            resources.ApplyResources(pictureBoxSun, "pictureBoxSun");
+            pictureBoxSun.Image = (Image)resources.GetObject("pictureBoxSun.Image");
+            pictureBoxSun.Location = new Point(0, 0);
             pictureBoxSun.Name = "pictureBoxSun";
+            pictureBoxSun.Size = new Size(100, 50);
+            pictureBoxSun.TabIndex = 5;
             pictureBoxSun.TabStop = false;
             // 
             // btnTopic
             // 
-            resources.ApplyResources(btnTopic, "btnTopic");
+            btnTopic.Location = new Point(0, 0);
             btnTopic.Name = "btnTopic";
             btnTopic.OverrideDefault.Back.Color1 = Color.FromArgb(31, 28, 32);
             btnTopic.OverrideDefault.Back.Color2 = Color.FromArgb(31, 28, 32);
@@ -94,6 +104,7 @@
             btnTopic.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTopic.OverrideDefault.Border.Rounding = 10F;
             btnTopic.OverrideDefault.Border.Width = 1;
+            btnTopic.Size = new Size(90, 25);
             btnTopic.StateCommon.Back.Color1 = Color.FromArgb(31, 28, 32);
             btnTopic.StateCommon.Back.Color2 = Color.FromArgb(31, 28, 32);
             btnTopic.StateCommon.Border.Color1 = Color.FromArgb(252, 238, 182);
@@ -101,31 +112,38 @@
             btnTopic.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTopic.StateCommon.Border.Rounding = 10F;
             btnTopic.StateCommon.Border.Width = 1;
-            btnTopic.Values.Text = resources.GetString("btnTopic.Values.Text");
+            btnTopic.TabIndex = 3;
+            btnTopic.Values.Text = "";
             // 
             // panelLine
             // 
             panelLine.BackColor = Color.FromArgb(252, 238, 182);
-            resources.ApplyResources(panelLine, "panelLine");
+            panelLine.Location = new Point(0, 0);
             panelLine.Name = "panelLine";
+            panelLine.Size = new Size(200, 100);
+            panelLine.TabIndex = 2;
             // 
             // labelWord
             // 
-            resources.ApplyResources(labelWord, "labelWord");
             labelWord.BackColor = Color.FromArgb(31, 28, 32);
             labelWord.ForeColor = Color.White;
+            labelWord.Location = new Point(0, 0);
             labelWord.Name = "labelWord";
+            labelWord.Size = new Size(100, 23);
+            labelWord.TabIndex = 0;
             // 
             // labelTopic
             // 
-            resources.ApplyResources(labelTopic, "labelTopic");
             labelTopic.BackColor = Color.FromArgb(31, 28, 32);
             labelTopic.ForeColor = Color.White;
+            labelTopic.Location = new Point(0, 0);
             labelTopic.Name = "labelTopic";
+            labelTopic.Size = new Size(100, 23);
+            labelTopic.TabIndex = 1;
             // 
             // btnSend
             // 
-            resources.ApplyResources(btnSend, "btnSend");
+            btnSend.Location = new Point(0, 0);
             btnSend.Name = "btnSend";
             btnSend.OverrideDefault.Back.Color1 = Color.FromArgb(31, 28, 32);
             btnSend.OverrideDefault.Back.Color2 = Color.FromArgb(31, 28, 32);
@@ -134,6 +152,7 @@
             btnSend.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             btnSend.OverrideDefault.Border.Rounding = 10F;
             btnSend.OverrideDefault.Border.Width = 1;
+            btnSend.Size = new Size(90, 25);
             btnSend.StateCommon.Back.Color1 = Color.FromArgb(31, 28, 32);
             btnSend.StateCommon.Back.Color2 = Color.FromArgb(31, 28, 32);
             btnSend.StateCommon.Border.Color1 = Color.FromArgb(252, 238, 182);
@@ -142,8 +161,9 @@
             btnSend.StateCommon.Border.Rounding = 10F;
             btnSend.StateCommon.Border.Width = 1;
             btnSend.StateCommon.Content.ShortText.Color1 = Color.White;
-            btnSend.StateCommon.Content.ShortText.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSend.Values.Text = resources.GetString("btnSend.Values.Text");
+            btnSend.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSend.TabIndex = 1;
+            btnSend.Values.Text = "";
             // 
             // panelBackground
             // 
@@ -151,45 +171,56 @@
             panelBackground.Controls.Add(btnSend);
             panelBackground.Controls.Add(txtBox);
             panelBackground.Controls.Add(txtBackground);
-            resources.ApplyResources(panelBackground, "panelBackground");
+            panelBackground.Location = new Point(0, 0);
             panelBackground.Name = "panelBackground";
+            panelBackground.Size = new Size(100, 100);
             panelBackground.StateCommon.Color1 = Color.FromArgb(24, 21, 24);
+            panelBackground.TabIndex = 8;
             // 
             // Circle
             // 
             Circle.BackColor = Color.Transparent;
-            resources.ApplyResources(Circle, "Circle");
+            Circle.Image = (Image)resources.GetObject("Circle.Image");
+            Circle.Location = new Point(0, 0);
             Circle.Name = "Circle";
+            Circle.Size = new Size(100, 50);
+            Circle.TabIndex = 0;
             Circle.TabStop = false;
             // 
             // txtBox
             // 
-            resources.ApplyResources(txtBox, "txtBox");
+            txtBox.Location = new Point(0, 0);
             txtBox.Name = "txtBox";
+            txtBox.Size = new Size(100, 41);
             txtBox.StateCommon.Back.Color1 = Color.FromArgb(31, 28, 32);
             txtBox.StateCommon.Border.Color1 = Color.FromArgb(252, 238, 182);
             txtBox.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             txtBox.StateCommon.Border.Rounding = 10F;
             txtBox.StateCommon.Border.Width = 1;
             txtBox.StateCommon.Content.Color1 = Color.White;
-            txtBox.StateCommon.Content.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBox.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBox.TabIndex = 2;
             // 
             // txtBackground
             // 
-            resources.ApplyResources(txtBackground, "txtBackground");
+            txtBackground.Location = new Point(0, 0);
             txtBackground.Name = "txtBackground";
+            txtBackground.Size = new Size(100, 80);
             txtBackground.StateCommon.Back.Color1 = Color.FromArgb(24, 21, 24);
             txtBackground.StateCommon.Border.Color1 = Color.FromArgb(252, 238, 182);
             txtBackground.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             txtBackground.StateCommon.Border.Rounding = 10F;
             txtBackground.StateCommon.Border.Width = 1;
             txtBackground.StateCommon.Content.Color1 = Color.White;
-            txtBackground.StateCommon.Content.Font = new Font("휴먼둥근헤드라인", 44.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBackground.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 44.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBackground.TabIndex = 3;
             // 
             // Form1
             // 
-            resources.ApplyResources(this, "$this");
+            AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(350, 190);
             Controls.Add(labelWord);
             Controls.Add(labelTopic);
             Controls.Add(panelLine);
@@ -201,7 +232,6 @@
             Controls.Add(panelBackground);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Form1";
-            
             ((System.ComponentModel.ISupportInitialize)pictureBoxTime).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSun).EndInit();
             ((System.ComponentModel.ISupportInitialize)panelBackground).EndInit();
@@ -209,7 +239,6 @@
             panelBackground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)Circle).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
