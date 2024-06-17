@@ -52,13 +52,13 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = WinFormClient.Properties.Resources.VoteBackground;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1274, 719);
+            ClientSize = new Size(1280, 720);
             Controls.Add(timeLabel);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Vote_form";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "MafiaGame";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -7,10 +7,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using SuggestedWord;
 using WaitingRoom;
 using Vote;
+using Krypton.Toolkit;
 
 namespace WinFormClient
 {
-    public partial class ChattingForm : Form
+    public partial class ChattingForm : KryptonForm
     {
         ChatClient _client;
         ClientHandler _clientHandler;
@@ -80,6 +81,11 @@ namespace WinFormClient
         private void UpdateTimeLabel()
         {
             timeLbl.Text = $"{m:D2}:{s:D2}";
+        }
+
+        private void ChattingForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -40,9 +40,10 @@
             otherLbl.BackColor = Color.FromArgb(88, 79, 79);
             otherLbl.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             otherLbl.ForeColor = Color.White;
-            otherLbl.Location = new Point(39, 15);
+            otherLbl.Location = new Point(57, 29);
+            otherLbl.Margin = new Padding(6, 0, 6, 0);
             otherLbl.Name = "otherLbl";
-            otherLbl.Size = new Size(240, 23);
+            otherLbl.Size = new Size(480, 50);
             otherLbl.TabIndex = 8;
             otherLbl.Text = "label";
             otherLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -50,9 +51,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 15);
+            pictureBox1.Location = new Point(0, 32);
+            pictureBox1.Margin = new Padding(6);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(22, 23);
+            pictureBox1.Size = new Size(45, 50);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
@@ -62,22 +64,24 @@
             userLbl.AutoSize = true;
             userLbl.Font = new Font("맑은 고딕", 7.875F, FontStyle.Regular, GraphicsUnit.Point);
             userLbl.ForeColor = Color.White;
-            userLbl.Location = new Point(-3, 0);
+            userLbl.Location = new Point(-6, -1);
+            userLbl.Margin = new Padding(6, 0, 6, 0);
             userLbl.Name = "userLbl";
-            userLbl.Size = new Size(36, 13);
+            userLbl.Size = new Size(67, 30);
             userLbl.TabIndex = 10;
             userLbl.Text = "User1";
             // 
             // OtherChat
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(userLbl);
             Controls.Add(pictureBox1);
             Controls.Add(otherLbl);
+            Margin = new Padding(6);
             Name = "OtherChat";
-            Size = new Size(592, 38);
+            Size = new Size(1184, 80);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

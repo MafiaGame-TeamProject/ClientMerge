@@ -37,24 +37,27 @@
             txtInput = new TextBox();
             sendBtn = new Button();
             chatPanel = new FlowLayoutPanel();
-            pictureBoxSun = new PictureBox();
-            pictureBoxTime = new PictureBox();
             timeLbl = new Label();
+            pictureBoxTime = new PictureBox();
             gTimer = new System.Windows.Forms.Timer(components);
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxSun).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxTime).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // plainTextLbl
             // 
             plainTextLbl.AutoSize = true;
             plainTextLbl.BackColor = Color.Transparent;
-            plainTextLbl.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
+            plainTextLbl.Font = new Font("휴먼둥근헤드라인", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             plainTextLbl.ForeColor = Color.White;
-            plainTextLbl.Location = new Point(57, 19);
+            plainTextLbl.Location = new Point(132, 39);
+            plainTextLbl.Margin = new Padding(6, 0, 6, 0);
             plainTextLbl.Name = "plainTextLbl";
-            plainTextLbl.Size = new Size(73, 25);
+            plainTextLbl.Size = new Size(141, 39);
             plainTextLbl.TabIndex = 1;
             plainTextLbl.Text = "제시어:";
             // 
@@ -62,11 +65,12 @@
             // 
             wordLbl.AutoSize = true;
             wordLbl.BackColor = Color.Transparent;
-            wordLbl.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
+            wordLbl.Font = new Font("휴먼둥근헤드라인", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             wordLbl.ForeColor = Color.White;
-            wordLbl.Location = new Point(136, 19);
+            wordLbl.Location = new Point(285, 39);
+            wordLbl.Margin = new Padding(6, 0, 6, 0);
             wordLbl.Name = "wordLbl";
-            wordLbl.Size = new Size(50, 25);
+            wordLbl.Size = new Size(91, 39);
             wordLbl.TabIndex = 2;
             wordLbl.Text = "의사";
             // 
@@ -74,9 +78,10 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1069, 46);
+            pictureBox2.Location = new Point(2138, 92);
+            pictureBox2.Margin = new Padding(6);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(100, 50);
+            pictureBox2.Size = new Size(200, 100);
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
             // 
@@ -86,9 +91,10 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("맑은 고딕", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(1117, 46);
+            label1.Location = new Point(2234, 92);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(110, 50);
+            label1.Size = new Size(222, 99);
             label1.TabIndex = 4;
             label1.Text = "03:00";
             // 
@@ -97,19 +103,21 @@
             txtInput.BackColor = Color.FromArgb(88, 79, 79);
             txtInput.Font = new Font("맑은 고딕", 19.875F, FontStyle.Regular, GraphicsUnit.Point);
             txtInput.ForeColor = Color.White;
-            txtInput.Location = new Point(50, 304);
+            txtInput.Location = new Point(105, 607);
+            txtInput.Margin = new Padding(6);
             txtInput.Name = "txtInput";
-            txtInput.Size = new Size(536, 43);
+            txtInput.Size = new Size(1070, 78);
             txtInput.TabIndex = 5;
             // 
             // sendBtn
             // 
             sendBtn.BackColor = Color.FromArgb(88, 79, 79);
-            sendBtn.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            sendBtn.Font = new Font("휴먼둥근헤드라인", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             sendBtn.ForeColor = Color.White;
-            sendBtn.Location = new Point(506, 312);
+            sendBtn.Location = new Point(1010, 617);
+            sendBtn.Margin = new Padding(6);
             sendBtn.Name = "sendBtn";
-            sendBtn.Size = new Size(78, 28);
+            sendBtn.Size = new Size(155, 57);
             sendBtn.TabIndex = 6;
             sendBtn.Text = "Send";
             sendBtn.UseVisualStyleBackColor = false;
@@ -119,76 +127,93 @@
             // 
             chatPanel.AutoScroll = true;
             chatPanel.BackColor = Color.Transparent;
-            chatPanel.Location = new Point(23, 59);
+            chatPanel.Location = new Point(49, 118);
+            chatPanel.Margin = new Padding(6);
             chatPanel.Name = "chatPanel";
-            chatPanel.Size = new Size(592, 230);
+            chatPanel.Size = new Size(1184, 460);
             chatPanel.TabIndex = 7;
-            // 
-            // pictureBoxSun
-            // 
-            pictureBoxSun.BackColor = Color.Transparent;
-            pictureBoxSun.Image = (Image)resources.GetObject("pictureBoxSun.Image");
-            pictureBoxSun.Location = new Point(23, 15);
-            pictureBoxSun.Name = "pictureBoxSun";
-            pictureBoxSun.Size = new Size(28, 35);
-            pictureBoxSun.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBoxSun.TabIndex = 21;
-            pictureBoxSun.TabStop = false;
-            // 
-            // pictureBoxTime
-            // 
-            pictureBoxTime.BackColor = Color.Transparent;
-            pictureBoxTime.Image = (Image)resources.GetObject("pictureBoxTime.Image");
-            pictureBoxTime.Location = new Point(527, 20);
-            pictureBoxTime.Name = "pictureBoxTime";
-            pictureBoxTime.Size = new Size(26, 27);
-            pictureBoxTime.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBoxTime.TabIndex = 22;
-            pictureBoxTime.TabStop = false;
             // 
             // timeLbl
             // 
             timeLbl.AutoSize = true;
             timeLbl.BackColor = Color.Transparent;
-            timeLbl.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
+            timeLbl.Font = new Font("휴먼둥근헤드라인", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             timeLbl.ForeColor = Color.White;
-            timeLbl.Location = new Point(559, 20);
+            timeLbl.Location = new Point(1103, 39);
             timeLbl.Name = "timeLbl";
-            timeLbl.Size = new Size(56, 25);
+            timeLbl.Size = new Size(134, 39);
             timeLbl.TabIndex = 23;
             timeLbl.Text = "03:00";
+            // 
+            // pictureBoxTime
+            // 
+            pictureBoxTime.BackColor = Color.Transparent;
+            pictureBoxTime.Image = (Image)resources.GetObject("pictureBoxTime.Image");
+            pictureBoxTime.Location = new Point(1042, 30);
+            pictureBoxTime.Margin = new Padding(6);
+            pictureBoxTime.Name = "pictureBoxTime";
+            pictureBoxTime.Size = new Size(52, 54);
+            pictureBoxTime.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxTime.TabIndex = 24;
+            pictureBoxTime.TabStop = false;
             // 
             // gTimer
             // 
             gTimer.Interval = 1000;
             gTimer.Tick += UItimer_Tick;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(49, 30);
+            pictureBox3.Margin = new Padding(6);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(100, 60);
+            pictureBox3.TabIndex = 1;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.Transparent;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(590, 330);
+            pictureBox4.Margin = new Padding(6);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(100, 60);
+            pictureBox4.TabIndex = 25;
+            pictureBox4.TabStop = false;
+            // 
             // ChattingForm
             // 
-            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleDimensions = new SizeF(192F, 192F);
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(637, 360);
+            ClientSize = new Size(1280, 720);
+            Controls.Add(plainTextLbl);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox4);
             Controls.Add(timeLbl);
             Controls.Add(pictureBoxTime);
-            Controls.Add(pictureBoxSun);
             Controls.Add(chatPanel);
             Controls.Add(sendBtn);
             Controls.Add(txtInput);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
             Controls.Add(wordLbl);
-            Controls.Add(plainTextLbl);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(6);
             Name = "ChattingForm";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Form1";
+            Text = "MafiaGame";
+            Load += ChattingForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxSun).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxTime).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -201,9 +226,10 @@
         private TextBox txtInput;
         private Button sendBtn;
         private FlowLayoutPanel chatPanel;
-        private PictureBox pictureBoxSun;
-        private PictureBox pictureBoxTime;
         private Label timeLbl;
+        private PictureBox pictureBoxTime;
         private System.Windows.Forms.Timer gTimer;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
     }
 }

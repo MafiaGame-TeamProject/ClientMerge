@@ -36,21 +36,23 @@
             myLbl.BackColor = Color.FromArgb(88, 79, 79);
             myLbl.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             myLbl.ForeColor = Color.White;
-            myLbl.Location = new Point(352, 15);
+            myLbl.Location = new Point(704, 30);
+            myLbl.Margin = new Padding(6, 0, 6, 0);
             myLbl.Name = "myLbl";
-            myLbl.Size = new Size(240, 23);
+            myLbl.Size = new Size(480, 50);
             myLbl.TabIndex = 9;
             myLbl.Text = "label";
             myLbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // MyChat
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(myLbl);
+            Margin = new Padding(6);
             Name = "MyChat";
-            Size = new Size(592, 38);
+            Size = new Size(1184, 80);
             ResumeLayout(false);
         }
 

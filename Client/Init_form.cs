@@ -82,10 +82,10 @@ namespace WinFormClient
             // WORD 메시지를 수신하면 suggestWord_form으로 전환
             if (hub.Message.StartsWith("WORD:"))
             {
-                var word = hub.Message.Substring("WORD:".Length);
+                var words = hub.Message.Substring("WORD:".Length).Split(',').ToList();
                 BeginInvoke((MethodInvoker)delegate
                 {
-                    var suggestWordForm = new suggestWord_form(_client!, _clientHandler!, UserName, word, chattingForm);
+                    var suggestWordForm = new suggestWord_form(_client!, _clientHandler!, UserName, words, chattingForm);
                     suggestWordForm.Show();
                     waitingRoomForm.Hide();
                 });
@@ -133,6 +133,11 @@ namespace WinFormClient
         {
             _client.Close();
             this.Close();
+        }
+
+        private void Init_form_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -60,10 +60,10 @@ namespace WaitingRoom
             var hub = e.Hub;
             if (hub.Message.StartsWith("WORD:"))
             {
-                _word = hub.Message.Substring("WORD:".Length);
+                var words = hub.Message.Substring("WORD:".Length).Split(',').ToList();
                 BeginInvoke((MethodInvoker)delegate
                 {
-                    var suggestWordForm = new suggestWord_form(_client, _clientHandler, _userName, _word, _chattingForm);
+                    var suggestWordForm = new suggestWord_form(_client, _clientHandler, _userName, words, _chattingForm);
                     suggestWordForm.Show();
                     this.Hide();
                 });

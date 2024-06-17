@@ -53,9 +53,10 @@
             timeLabel.BackColor = Color.Transparent;
             timeLabel.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             timeLabel.ForeColor = Color.White;
-            timeLabel.Location = new Point(530, 17);
+            timeLabel.Location = new Point(1060, 34);
+            timeLabel.Margin = new Padding(6, 0, 6, 0);
             timeLabel.Name = "timeLabel";
-            timeLabel.Size = new Size(72, 25);
+            timeLabel.Size = new Size(141, 50);
             timeLabel.TabIndex = 15;
             timeLabel.Text = "3:00";
             // 
@@ -65,19 +66,21 @@
             labelScreen.BackColor = Color.Transparent;
             labelScreen.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelScreen.ForeColor = Color.White;
-            labelScreen.Location = new Point(62, 17);
+            labelScreen.Location = new Point(124, 34);
+            labelScreen.Margin = new Padding(6, 0, 6, 0);
             labelScreen.Name = "labelScreen";
-            labelScreen.Size = new Size(168, 25);
+            labelScreen.Size = new Size(334, 50);
             labelScreen.TabIndex = 12;
-            labelScreen.Text = "제시어 맞추기";
+            labelScreen.Text = "제시어 맞히기";
             // 
             // pictureBoxTime
             // 
             pictureBoxTime.BackColor = Color.Transparent;
             pictureBoxTime.Image = (Image)resources.GetObject("pictureBoxTime.Image");
-            pictureBoxTime.Location = new Point(498, 17);
+            pictureBoxTime.Location = new Point(996, 34);
+            pictureBoxTime.Margin = new Padding(6);
             pictureBoxTime.Name = "pictureBoxTime";
-            pictureBoxTime.Size = new Size(26, 27);
+            pictureBoxTime.Size = new Size(52, 54);
             pictureBoxTime.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxTime.TabIndex = 23;
             pictureBoxTime.TabStop = false;
@@ -86,9 +89,10 @@
             // 
             pictureBoxSun.BackColor = Color.Transparent;
             pictureBoxSun.Image = (Image)resources.GetObject("pictureBoxSun.Image");
-            pictureBoxSun.Location = new Point(30, 12);
+            pictureBoxSun.Location = new Point(60, 24);
+            pictureBoxSun.Margin = new Padding(6);
             pictureBoxSun.Name = "pictureBoxSun";
-            pictureBoxSun.Size = new Size(28, 35);
+            pictureBoxSun.Size = new Size(56, 70);
             pictureBoxSun.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxSun.TabIndex = 22;
             pictureBoxSun.TabStop = false;
@@ -99,9 +103,10 @@
             labelDie.BackColor = Color.FromArgb(15, 17, 24);
             labelDie.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelDie.ForeColor = Color.White;
-            labelDie.Location = new Point(158, 130);
+            labelDie.Location = new Point(316, 260);
+            labelDie.Margin = new Padding(6, 0, 6, 0);
             labelDie.Name = "labelDie";
-            labelDie.Size = new Size(330, 25);
+            labelDie.Size = new Size(657, 50);
             labelDie.TabIndex = 24;
             labelDie.Text = "user1님이 처형당했습니다.";
             // 
@@ -109,9 +114,10 @@
             // 
             pictureBoxDie.BackColor = Color.FromArgb(15, 17, 24);
             pictureBoxDie.Image = (Image)resources.GetObject("pictureBoxDie.Image");
-            pictureBoxDie.Location = new Point(108, 111);
+            pictureBoxDie.Location = new Point(216, 222);
+            pictureBoxDie.Margin = new Padding(6);
             pictureBoxDie.Name = "pictureBoxDie";
-            pictureBoxDie.Size = new Size(427, 57);
+            pictureBoxDie.Size = new Size(854, 114);
             pictureBoxDie.TabIndex = 26;
             pictureBoxDie.TabStop = false;
             // 
@@ -120,9 +126,10 @@
             panel1.BackColor = Color.FromArgb(15, 17, 24);
             panel1.Controls.Add(labelJob);
             panel1.Controls.Add(pictureBoxLine);
-            panel1.Location = new Point(108, 158);
+            panel1.Location = new Point(216, 316);
+            panel1.Margin = new Padding(6);
             panel1.Name = "panel1";
-            panel1.Size = new Size(427, 112);
+            panel1.Size = new Size(854, 224);
             panel1.TabIndex = 25;
             // 
             // labelJob
@@ -131,9 +138,10 @@
             labelJob.BackColor = Color.Transparent;
             labelJob.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelJob.ForeColor = Color.White;
-            labelJob.Location = new Point(147, 22);
+            labelJob.Location = new Point(294, 44);
+            labelJob.Margin = new Padding(6, 0, 6, 0);
             labelJob.Name = "labelJob";
-            labelJob.Size = new Size(143, 50);
+            labelJob.Size = new Size(284, 100);
             labelJob.TabIndex = 18;
             labelJob.Text = "User1님은\r\n시민입니다.";
             // 
@@ -141,21 +149,22 @@
             // 
             pictureBoxLine.BackColor = Color.FromArgb(15, 17, 24);
             pictureBoxLine.Image = (Image)resources.GetObject("pictureBoxLine.Image");
-            pictureBoxLine.Location = new Point(0, 75);
+            pictureBoxLine.Location = new Point(0, 150);
+            pictureBoxLine.Margin = new Padding(6);
             pictureBoxLine.Name = "pictureBoxLine";
-            pictureBoxLine.Size = new Size(427, 37);
+            pictureBoxLine.Size = new Size(854, 74);
             pictureBoxLine.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxLine.TabIndex = 18;
             pictureBoxLine.TabStop = false;
             // 
-            // wordGuessing
+            // wordGuessing_citizen
             // 
-            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleDimensions = new SizeF(192F, 192F);
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(640, 360);
+            ClientSize = new Size(1280, 720);
             Controls.Add(labelDie);
             Controls.Add(pictureBoxDie);
             Controls.Add(panel1);
@@ -164,9 +173,11 @@
             Controls.Add(timeLabel);
             Controls.Add(labelScreen);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "wordGuessing";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "citizen";
+            Margin = new Padding(6);
+            Name = "wordGuessing_citizen";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "MafiaGame";
+            
             ((System.ComponentModel.ISupportInitialize)pictureBoxTime).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSun).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxDie).EndInit();

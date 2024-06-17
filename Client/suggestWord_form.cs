@@ -27,7 +27,7 @@ namespace SuggestedWord
         private ChatClient _client;
         private ClientHandler _clientHandler;
         private string _userName;
-        private string _word;
+        private List<string> _words;
         private ChattingForm _chattingForm;
 
         System.Windows.Forms.Label[] CardLable;
@@ -45,21 +45,29 @@ namespace SuggestedWord
 
             static ImageManager()
             {
-                string basePath = AppDomain.CurrentDomain.BaseDirectory;
-                CardFront = Image.FromFile(Path.Combine(basePath, "Card_front.png"));
-                CardBack = Image.FromFile(Path.Combine(basePath, "Card_back.png"));
-                SuggestedPicture = Image.FromFile(Path.Combine(basePath, "fontisto_doctor.png"));
+                // 프로젝트 루트 디렉토리를 가져옵니다.
+                string baseDirectory = Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName;
+                // 상대 경로를 설정합니다.
+                string relativePath = @"Resources";
+                // 전체 경로를 결합합니다.
+                string resourcesPath = Path.Combine(baseDirectory, relativePath);
+
+                CardFront = Image.FromFile(Path.Combine(resourcesPath, "Card_front.png"));
+                CardBack = Image.FromFile(Path.Combine(resourcesPath, "Card_back.png"));
+                SuggestedPicture = Image.FromFile(Path.Combine(resourcesPath, "fontisto_doctor.png"));
+
+
             }
         }
 
 
-        public suggestWord_form(ChatClient client, ClientHandler handler, string UserName, string word, ChattingForm chattingForm)
+        public suggestWord_form(ChatClient client, ClientHandler handler, string UserName, List<string> words, ChattingForm chattingForm)
         {
             InitializeComponent();
             _client = client;
             _clientHandler = handler;
             _userName = UserName;
-            _word = word;
+            _words = words;
             _chattingForm = chattingForm;
             InitializeCardFlipComponents();
         }
@@ -93,7 +101,7 @@ namespace SuggestedWord
 
             SugestedWord_lbl = new System.Windows.Forms.Label
             {
-                Text = _word,
+                Text = _words[2],
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.Black,
@@ -103,7 +111,7 @@ namespace SuggestedWord
 
             Explanation_lbl = new System.Windows.Forms.Label
             {
-                Text = "당신의 제시어는 " + _word + "입니다.",
+                Text = "당신의 제시어는 " + _words[2] + "입니다.",
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.FromArgb(255, 209, 154),

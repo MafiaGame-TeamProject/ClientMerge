@@ -22,11 +22,20 @@ namespace Vote
 
             static ImageManager()
             {
-                string basePath = AppDomain.CurrentDomain.BaseDirectory;
-                
-                uncheckedImage = Image.FromFile(Path.Combine(basePath, "unchecked.png"));
-                checkedImage = Image.FromFile(Path.Combine(basePath, "checked.png"));
-                buttonImage = Image.FromFile(Path.Combine(basePath, "voteButton.png"));
+                // 프로젝트 루트 디렉토리를 가져옵니다.
+                string baseDirectory = Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName;
+                // 상대 경로를 설정합니다.
+                string relativePath = @"Resources";
+                // 전체 경로를 결합합니다.
+                string resourcesPath = Path.Combine(baseDirectory, relativePath);
+
+                uncheckedImage = Image.FromFile(Path.Combine(resourcesPath, "unchecked.png"));
+                checkedImage = Image.FromFile(Path.Combine(resourcesPath, "checked.png"));
+                buttonImage = Image.FromFile(Path.Combine(resourcesPath, "voteButton.png"));
+
+
+
+
             }
         }
         public Vote_form()
@@ -56,7 +65,7 @@ namespace Vote
         private void InitializeCustomCheckBoxes()
         {
             // 이미지 로드 (프로젝트의 실행 파일 경로에 unchecked.png와 checked.png가 있어야 합니다)
-            
+
 
             customCheckBoxes = new List<CustomCheckBox>();
             labels = new List<Label>();
@@ -108,7 +117,7 @@ namespace Vote
 
         private void InitializeCustomButton()
         {
-            
+
 
             // PictureBox 설정
             pictureBoxButton = new PictureBox

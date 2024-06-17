@@ -40,19 +40,19 @@
             // 
             // suggestWord_form
             // 
-            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleDimensions = new SizeF(192F, 192F);
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = WinFormClient.Properties.Resources.제시어_분배__1_;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(640, 360);
+            ClientSize = new Size(1280, 720);
             DoubleBuffered = true;
             ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Margin = new Padding(2);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "suggestWord_form";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "MafiaGame";
             FormClosed += suggestWord_form_FormClosed;
             Load += Form1_Load;
             ResumeLayout(false);
