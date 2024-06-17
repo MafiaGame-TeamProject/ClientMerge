@@ -7,14 +7,16 @@ using System.Windows.Forms;
 using Krypton.Toolkit;
 using WaitingRoom;
 using SuggestedWord;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace WinFormClient
 {
     public partial class Init_form : KryptonForm
     {
-        public static ChatClient _client;
+        public static ChatClient? _client;
         private ClientHandler? _clientHandler;
         private waitingRoom_form waitingRoomForm;
+        private ChattingForm chattingForm;
 
         private int RoomId => (int)nudRoomId.Value;
         private string UserName => txtName.Text;
@@ -42,6 +44,7 @@ namespace WinFormClient
         private void Connected(object? sender, ChatLib.Events.ChatEventArgs e)
         {
             _clientHandler = e.ClientHandler;
+            chattingForm = new ChattingForm(_client, _clientHandler, UserName);
         }
 
         private void Disconnected(object? sender, ChatLib.Events.ChatEventArgs e)
@@ -64,10 +67,10 @@ namespace WinFormClient
                 var users = hub.Message.Substring("USER_LIST:".Length).Split(',').ToList();
                 if (waitingRoomForm == null || waitingRoomForm.IsDisposed)
                 {
-                    waitingRoomForm = new waitingRoom_form(_client);
+                    waitingRoomForm = new waitingRoom_form(_client, _clientHandler, UserName, chattingForm);
                     waitingRoomForm.UserInfo(RoomId, users);
                     waitingRoomForm.Show();
-                    waitingRoomForm.FormClosing += waitingRoom_form_FormClosing;
+                    waitingRoomForm.FormClosing += waitingRoom_form_FormClosing!;
                     this.Hide();
                 }
                 else
@@ -82,13 +85,22 @@ namespace WinFormClient
                 var word = hub.Message.Substring("WORD:".Length);
                 BeginInvoke((MethodInvoker)delegate
                 {
-                    var suggestWordForm = new suggestWord_form(_client, word);
+                    var suggestWordForm = new suggestWord_form(_client!, _clientHandler!, UserName, word, chattingForm);
                     suggestWordForm.Show();
                     waitingRoomForm.Hide();
                 });
             }
 
-            
+            if (hub.Message.StartsWith("MESSAGE:"))
+            {
+                var _msg = hub.Message.Substring("MESSAGE:".Length);
+                string[] msgArr = _msg.Split(':'); // msgArr[0] : UserName, msgArr[1] : Message
+
+                if (msgArr[0] != UserName)
+                {
+                    chattingForm.AddOtherChat(msgArr[1], msgArr[0]);
+                }
+            }
         }
 
         private async void BtnConnect_Click(object? sender, EventArgs e)

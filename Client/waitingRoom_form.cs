@@ -5,6 +5,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using ChatLib.Sockets;
 using SuggestedWord;
+using ChatLib.Handlers;
+using WinFormClient;
 
 namespace WaitingRoom
 {
@@ -14,12 +16,19 @@ namespace WaitingRoom
         private List<string> newList = new();
         private static int RoomId;
         private ChatClient _client;
+        private ClientHandler _clientHandler;
+        private string _userName;
         private string _word;
+        private ChattingForm _chattingForm;
 
-        public waitingRoom_form(ChatClient client)
+        public waitingRoom_form(ChatClient client, ClientHandler handler, string UserName, ChattingForm chattingForm)
         {
             InitializeComponent();
             _client = client;
+            _clientHandler = handler;
+            _userName = UserName;
+            _chattingForm = chattingForm;
+
             labels = new Label[] { name1_lbl, name2_lbl, name3_lbl, name4_lbl };
             _client.Received += Client_Received;
         }
@@ -54,7 +63,7 @@ namespace WaitingRoom
                 _word = hub.Message.Substring("WORD:".Length);
                 BeginInvoke((MethodInvoker)delegate
                 {
-                    var suggestWordForm = new suggestWord_form(_client, _word);
+                    var suggestWordForm = new suggestWord_form(_client, _clientHandler, _userName, _word, _chattingForm);
                     suggestWordForm.Show();
                     this.Hide();
                 });

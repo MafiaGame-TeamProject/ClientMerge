@@ -70,3 +70,6 @@ C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-wi
 C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.runtimeconfig.json
 C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\bin\Debug\net7.0-windows\Krypton.Toolkit.dll
 C:\Users\ibsun\OneDrive\바탕 화면\APP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.genruntimeconfig.cache
+C:\Users\gifou\LiarDemo\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.ChattingForm.resources
+C:\Users\gifou\LiarDemo\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.MyChat.resources
+C:\Users\gifou\LiarDemo\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.OtherChat.resources

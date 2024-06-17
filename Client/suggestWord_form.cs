@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ChatLib.Handlers;
 using ChatLib.Sockets;
 using Krypton.Toolkit;
+using WinFormClient;
 
 namespace SuggestedWord
 {
@@ -23,7 +25,10 @@ namespace SuggestedWord
         private Krypton.Toolkit.KryptonPictureBox SuggestPB;
 
         private ChatClient _client;
+        private ClientHandler _clientHandler;
+        private string _userName;
         private string _word;
+        private ChattingForm _chattingForm;
 
         System.Windows.Forms.Label[] CardLable;
 
@@ -48,16 +53,20 @@ namespace SuggestedWord
         }
 
 
-        public suggestWord_form(ChatClient client, string word)
+        public suggestWord_form(ChatClient client, ClientHandler handler, string UserName, string word, ChattingForm chattingForm)
         {
             InitializeComponent();
             _client = client;
+            _clientHandler = handler;
+            _userName = UserName;
             _word = word;
+            _chattingForm = chattingForm;
             InitializeCardFlipComponents();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            globalTimer.Start();
         }
 
         private void InitializeCardFlipComponents()
@@ -217,6 +226,17 @@ namespace SuggestedWord
         private void suggestWord_form_FormClosed(object sender, FormClosedEventArgs e)
         {
             _client.Close();
+        }
+
+        private void globalTimer_Tick(object sender, EventArgs e)
+        {
+            globalTimer.Stop();
+
+            BeginInvoke((MethodInvoker)delegate
+            {
+                _chattingForm.Show();
+                this.Hide();
+            });
         }
     }
 }

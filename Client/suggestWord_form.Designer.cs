@@ -30,16 +30,22 @@
         {
             components = new System.ComponentModel.Container();
             timer = new System.Windows.Forms.Timer(components);
+            globalTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
+            // 
+            // globalTimer
+            // 
+            globalTimer.Interval = 30000;
+            globalTimer.Tick += globalTimer_Tick;
             // 
             // suggestWord_form
             // 
-            AutoScaleDimensions = new SizeF(120F, 120F);
+            AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = WinFormClient.Properties.Resources.제시어_분배__1_;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(640, 360);
             DoubleBuffered = true;
             ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -54,6 +60,7 @@
 
         #endregion
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Timer globalTimer;
     }
 }
 
