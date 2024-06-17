@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using ChatLib.Handlers;
 using ChatLib.Sockets;
 using Krypton.Toolkit;
+
 using WinFormClient;
 
 namespace SuggestedWord
@@ -29,6 +30,7 @@ namespace SuggestedWord
         private string _userName;
         private List<string> _words;
         private ChattingForm _chattingForm;
+       
 
         System.Windows.Forms.Label[] CardLable;
 
@@ -73,6 +75,7 @@ namespace SuggestedWord
             // word2 : 시민 제시어 [3]
             // liarName : 라이어 이름 [5]
             _chattingForm = chattingForm;
+            
             InitializeCardFlipComponents();
         }
 

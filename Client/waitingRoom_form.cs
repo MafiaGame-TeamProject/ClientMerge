@@ -20,6 +20,7 @@ namespace WaitingRoom
         private string _userName;
         private string _word;
         private ChattingForm _chattingForm;
+        
 
         public waitingRoom_form(ChatClient client, ClientHandler handler, string UserName, ChattingForm chattingForm)
         {
@@ -28,6 +29,7 @@ namespace WaitingRoom
             _clientHandler = handler;
             _userName = UserName;
             _chattingForm = chattingForm;
+            
 
             labels = new Label[] { name1_lbl, name2_lbl, name3_lbl, name4_lbl };
             _client.Received += Client_Received;

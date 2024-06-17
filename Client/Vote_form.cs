@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using ChatLib.Handlers;
+using ChatLib.Models;
+using ChatLib.Sockets;
 using Krypton.Toolkit;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Vote
 {
@@ -12,7 +16,16 @@ namespace Vote
         private List<CustomCheckBox> customCheckBoxes;
         private List<Label> labels;
         private PictureBox pictureBoxButton;
+
         private int remainingTime = 180; // 3분(180초) 화면별 초 설정 마다 다르게 할것
+
+        
+        List<string> _userList=new List<string>();
+
+        ChatClient _client;
+        ClientHandler _clientHandler;
+        string _userName;
+        
 
         public static class ImageManager
         {
@@ -34,9 +47,19 @@ namespace Vote
                 buttonImage = Image.FromFile(Path.Combine(resourcesPath, "voteButton.png"));
             }
         }
-        public Vote_form()
+        public Vote_form(ChatClient client, ClientHandler handler, string userName, List<string> users)
         {
             InitializeComponent();
+            _client = client;
+            _clientHandler = handler;
+            _userName = userName;
+
+            for (int i = 0; i < 4; i++)
+            {
+                if (users[i] != _userName)
+                    _userList.Add(users[i]);
+            }
+
             InitializeCustomCheckBoxes();
             InitializeCustomButton();
 
@@ -57,6 +80,8 @@ namespace Vote
             timer1.Start();
         }
 
+       
+
         private void InitializeCustomCheckBoxes()
         {
             // 이미지 로드 (프로젝트의 실행 파일 경로에 unchecked.png와 checked.png가 있어야 합니다)
@@ -75,7 +100,7 @@ namespace Vote
                 };
                 var label = new Label()
                 {
-                    Text = "User" + i,
+                    Text = _userList[i],
                     AutoSize = true,
                     BackColor = Color.Transparent,
                     ForeColor = Color.White,

@@ -6,8 +6,8 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using SuggestedWord;
 using WaitingRoom;
-using Vote;
 using Krypton.Toolkit;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace WinFormClient
 {
@@ -17,8 +17,12 @@ namespace WinFormClient
         ClientHandler _clientHandler;
         string _userName;
 
+        List<string> _userList;
+
         private int m = 0;
-        private int s = 30;
+        private int s = 5;
+
+       
 
         public ChattingForm(ChatClient client, ClientHandler handler, string userName)
         {
@@ -26,6 +30,7 @@ namespace WinFormClient
             _client = client;
             _clientHandler = handler;
             _userName = userName;
+            
         }
 
         // 메시지를 보내는 메서드
@@ -40,7 +45,7 @@ namespace WinFormClient
                 _clientHandler.Send(new ChatHub
                 {
                     UserName = _userName,
-                    Message = msg,
+                    Message = "MsgSend:"+msg,
                 });
 
             }
@@ -51,6 +56,12 @@ namespace WinFormClient
             chatPanel.Controls.Add(new OtherChat(msg, user));
         }
 
+        /*public void setUsername(List<string> users)
+        {
+            _userList = users;
+            
+        }*/
+
         private void UItimer_Tick(object sender, EventArgs e)
         {
             if (s == 0)
@@ -58,11 +69,10 @@ namespace WinFormClient
                 if (m == 0)
                 {
                     gTimer.Stop();
-                    BeginInvoke((MethodInvoker)delegate
+
+                    _clientHandler.Send(new ChatHub
                     {
-                        var voteForm = new Vote_form();
-                        voteForm.Show();
-                        this.Hide();
+                        Message = "plzUserList",
                     });
                     return;
                 }

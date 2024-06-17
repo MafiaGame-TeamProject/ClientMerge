@@ -8,6 +8,7 @@ using Krypton.Toolkit;
 using WaitingRoom;
 using SuggestedWord;
 using Microsoft.VisualBasic.ApplicationServices;
+using Vote;
 
 namespace WinFormClient
 {
@@ -16,7 +17,9 @@ namespace WinFormClient
         public static ChatClient? _client;
         private ClientHandler? _clientHandler;
         private waitingRoom_form waitingRoomForm;
-        private ChattingForm chattingForm; 
+        private ChattingForm chattingForm;
+        private bool voteFormShown = false;
+
         private string liarAnswer;
 
         private int RoomId => (int)nudRoomId.Value;
@@ -45,6 +48,7 @@ namespace WinFormClient
         private void Connected(object? sender, ChatLib.Events.ChatEventArgs e)
         {
             _clientHandler = e.ClientHandler;
+            
             chattingForm = new ChattingForm(_client, _clientHandler, UserName); // chattingForm instance 생성
         }
 
@@ -89,6 +93,7 @@ namespace WinFormClient
                     var suggestWordForm = new suggestWord_form(_client!, _clientHandler!, UserName, words, chattingForm);
                     suggestWordForm.Show();
                     waitingRoomForm.Hide();
+
                 });
             }
 
@@ -101,6 +106,24 @@ namespace WinFormClient
                 {
                     chattingForm.AddOtherChat(msgArr[1], msgArr[0]);
                 }
+            }
+
+            if (hub.Message.StartsWith("VOTE_USER_LIST:"))
+            {
+                var users = hub.Message.Substring("VOTE_USER_LIST:".Length).Split(',').ToList();
+                
+                BeginInvoke((MethodInvoker)delegate
+                {
+
+                    if (!voteFormShown) // Vote 창이 이미 보여진 경우 방지
+                    {
+                        var voteForm = new Vote_form(_client, _clientHandler, UserName, users);
+                        voteForm.Show();
+                        chattingForm.Hide();
+                        voteFormShown = true;
+                    }//chattingForm.setUsername(_user);
+                    
+                });
             }
 
             // 서버에서 라이어 제시어를 받을 때
