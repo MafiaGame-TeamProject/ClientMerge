@@ -102,3 +102,8 @@ D:\2024\3-1\AS\teamproject\ClientMerge\Client\obj\Debug\net7.0-windows\refint\Wi
 D:\2024\3-1\AS\teamproject\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.pdb
 D:\2024\3-1\AS\teamproject\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.genruntimeconfig.cache
 D:\2024\3-1\AS\teamproject\ClientMerge\Client\obj\Debug\net7.0-windows\ref\WinFormClient.dll
+C:\Users\gifou\LiarDemo\ClientMerge\Client\obj\Debug\net7.0-windows\게임종료.gameEnd.resources
+C:\Users\gifou\LiarDemo\ClientMerge\Client\obj\Debug\net7.0-windows\merge_citizen.voteResult.resources
+C:\Users\gifou\LiarDemo\ClientMerge\Client\obj\Debug\net7.0-windows\Vote.Vote_form.resources
+C:\Users\gifou\LiarDemo\ClientMerge\Client\obj\Debug\net7.0-windows\merge_citizen.wordGuessing_citizen.resources
+C:\Users\gifou\LiarDemo\ClientMerge\Client\obj\Debug\net7.0-windows\제시어맞추기_라이어화면_.Form1.resources
