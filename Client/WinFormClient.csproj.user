@@ -4,6 +4,9 @@
     <Compile Update="ChattingForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="gameEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Init_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -16,10 +19,19 @@
     <Compile Update="suggestWord_form.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="voteResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Vote_form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="waitingRoom_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="wordGuessing_citizen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="wordGuessing_liar.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
