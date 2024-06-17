@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 using ChatLib.Handlers;
 using ChatLib.Models;
@@ -17,14 +18,17 @@ namespace Vote
         private List<Label> labels;
         private PictureBox pictureBoxButton;
 
-        private int remainingTime = 180; // 3분(180초) 화면별 초 설정 마다 다르게 할것
+        private int remainingTime = 60; // 1분
 
-        
-        List<string> _userList=new List<string>();
+
+        List<string> _userList = new List<string>();
 
         ChatClient _client;
         ClientHandler _clientHandler;
         string _userName;
+        private int checkedIndex = 1;
+
+        private string msg = "";
         
 
         public static class ImageManager
@@ -80,7 +84,7 @@ namespace Vote
             timer1.Start();
         }
 
-       
+
 
         private void InitializeCustomCheckBoxes()
         {
@@ -88,31 +92,31 @@ namespace Vote
 
 
             customCheckBoxes = new List<CustomCheckBox>();
-            labels = new List<Label>();
+            labels = new List<Label>() { label1, label2, label3 };
 
             // 여러 개의 사용자 정의 체크박스 생성
             for (int i = 0; i < 3; i++)
             {
+
+                var label = labels[i];
+
+                label.Text = _userList[i];
+                label.TextAlign = ContentAlignment.MiddleCenter;
+
+
                 var customCheckBox = new CustomCheckBox(ImageManager.uncheckedImage, ImageManager.checkedImage)
                 {
-                    Location = new Point(390, 89 + i * 58),
+                    Location = new Point(label.Location.X + 330, label.Location.Y - 10),
                     Tag = i // 각 체크박스에 고유 태그 설정
                 };
-                var label = new Label()
-                {
-                    Text = _userList[i],
-                    AutoSize = true,
-                    BackColor = Color.Transparent,
-                    ForeColor = Color.White,
-                    Location = new Point(230, 93 + i * 58),
-                    Font = new Font(Name, 15),
-                    TextAlign = ContentAlignment.MiddleCenter
-                };
+
                 customCheckBox.CheckedChanged += CustomCheckBox_CheckedChanged;
                 this.Controls.Add(customCheckBox.PictureBox);
                 this.Controls.Add(label);
                 customCheckBoxes.Add(customCheckBox);
                 labels.Add(label);
+
+
             }
         }
 
@@ -129,6 +133,9 @@ namespace Vote
                         customCheckBox.Checked = false;
                     }
                 }
+
+                // 체크된 체크박스의 인덱스 저장
+                checkedIndex = (int)clickedCheckBox.Tag;
             }
 
             // 버튼 활성화 상태 업데이트
@@ -142,11 +149,11 @@ namespace Vote
             // PictureBox 설정
             pictureBoxButton = new PictureBox
             {
-                Width = 388 / 2,
-                Height = 84 / 2,
+                Width = 388,
+                Height = 84,
                 Image = ImageManager.buttonImage,
                 SizeMode = PictureBoxSizeMode.StretchImage,
-                Location = new Point(220, 260),
+                Location = new Point(450, 525),
                 BackColor = Color.Transparent // 투명 배경 설정
             };
 
@@ -160,8 +167,14 @@ namespace Vote
 
         private void PictureBoxButton_Click(object sender, EventArgs e)
         {
-            // 버튼 클릭 시 수행할 작업
-            MessageBox.Show("Button clicked!");
+            // 버튼 클릭 시 체크박스 비활성화
+            foreach (var checkBox in customCheckBoxes)
+            {
+                checkBox.Disable();
+            }
+
+            // 버튼 클릭 시 수행
+            msg = labels[checkedIndex].Text;
         }
 
         private void UpdateButtonState()
@@ -186,7 +199,13 @@ namespace Vote
             if (remainingTime <= 0)
             {
                 timer1.Stop();
-                //MessageBox.Show("Time's up!");
+                //서버에 전송
+                if (msg == "")
+                    msg = labels[checkedIndex].Text;
+                _clientHandler.Send(new ChatHub
+                {
+                    Message = "VOTED:" + msg,
+                });
             }
         }
 
@@ -201,8 +220,8 @@ namespace Vote
         private Image checkedImage;
         public event EventHandler CheckedChanged;
 
-        private readonly int pbWidth = 68 / 2;
-        private readonly int pbHeight = 70 / 2;
+        private readonly int pbWidth = 68;
+        private readonly int pbHeight = 70;
 
         public bool Checked
         {
@@ -242,6 +261,16 @@ namespace Vote
                 SizeMode = PictureBoxSizeMode.StretchImage
             };
             PictureBox.Click += PictureBox_Click;
+        }
+
+        public void Disable()
+        {
+            PictureBox.Enabled = false;
+        }
+
+        public void Enable()
+        {
+            PictureBox.Enabled = true;
         }
 
         private void PictureBox_Click(object sender, EventArgs e)
