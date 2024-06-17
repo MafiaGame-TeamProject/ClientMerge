@@ -32,10 +32,6 @@ namespace Vote
                 uncheckedImage = Image.FromFile(Path.Combine(resourcesPath, "unchecked.png"));
                 checkedImage = Image.FromFile(Path.Combine(resourcesPath, "checked.png"));
                 buttonImage = Image.FromFile(Path.Combine(resourcesPath, "voteButton.png"));
-
-
-
-
             }
         }
         public Vote_form()
@@ -53,7 +49,6 @@ namespace Vote
             timer1.Interval = 1000; // 1초 간격
             timer1.Tick += Timer1_Tick;
             this.Load += Form1_Load;
-
         }
 
         private void Form1_Load(object sender, EventArgs e)

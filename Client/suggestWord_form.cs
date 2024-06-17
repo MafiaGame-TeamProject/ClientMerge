@@ -68,6 +68,10 @@ namespace SuggestedWord
             _clientHandler = handler;
             _userName = UserName;
             _words = words;
+            // assignedWord : 내가 할당 받은 제시어 [4]
+            // word1 : 라이어 제시어 [2]
+            // word2 : 시민 제시어 [3]
+            // liarName : 라이어 이름 [5]
             _chattingForm = chattingForm;
             InitializeCardFlipComponents();
         }
@@ -243,6 +247,7 @@ namespace SuggestedWord
             BeginInvoke((MethodInvoker)delegate
             {
                 _chattingForm.Show();
+                _chattingForm.setWord(_words[4]);
                 this.Hide();
             });
         }

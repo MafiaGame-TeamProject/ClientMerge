@@ -85,5 +85,10 @@ namespace WinFormClient
         {
             gTimer.Start();
         }
+        
+        public void setWord(string word)
+        {
+            wordLbl.Text = word;
+        }
     }
 }

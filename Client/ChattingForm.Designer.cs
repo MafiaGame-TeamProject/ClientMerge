@@ -66,9 +66,8 @@
             wordLbl.ForeColor = Color.White;
             wordLbl.Location = new Point(124, 20);
             wordLbl.Name = "wordLbl";
-            wordLbl.Size = new Size(40, 24);
+            wordLbl.Size = new Size(0, 24);
             wordLbl.TabIndex = 2;
-            wordLbl.Text = "의사";
             // 
             // pictureBox2
             // 
