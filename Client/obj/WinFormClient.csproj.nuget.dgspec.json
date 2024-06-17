@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gifou\\LiarDemo\\ClientMerge\\Client\\WinFormClient.csproj": {}
+    "D:\\2024\\3-1\\AS\\teamproject\\ClientMerge\\Client\\WinFormClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gifou\\LiarDemo\\ClientMerge\\Client\\WinFormClient.csproj": {
+    "D:\\2024\\3-1\\AS\\teamproject\\ClientMerge\\Client\\WinFormClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gifou\\LiarDemo\\ClientMerge\\Client\\WinFormClient.csproj",
+        "projectUniqueName": "D:\\2024\\3-1\\AS\\teamproject\\ClientMerge\\Client\\WinFormClient.csproj",
         "projectName": "WinFormClient",
-        "projectPath": "C:\\Users\\gifou\\LiarDemo\\ClientMerge\\Client\\WinFormClient.csproj",
-        "packagesPath": "C:\\Users\\gifou\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gifou\\LiarDemo\\ClientMerge\\Client\\obj\\",
+        "projectPath": "D:\\2024\\3-1\\AS\\teamproject\\ClientMerge\\Client\\WinFormClient.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\2024\\3-1\\AS\\teamproject\\ClientMerge\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gifou\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\gifou\\LiarDemo\\library\\ChatLib.csproj": {
-                "projectPath": "C:\\Users\\gifou\\LiarDemo\\library\\ChatLib.csproj"
+              "D:\\2024\\3-1\\AS\\teamproject\\library\\ChatLib.csproj": {
+                "projectPath": "D:\\2024\\3-1\\AS\\teamproject\\library\\ChatLib.csproj"
               }
             }
           }
@@ -65,24 +65,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.18, 7.0.18]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -95,17 +77,17 @@
         }
       }
     },
-    "C:\\Users\\gifou\\LiarDemo\\library\\ChatLib.csproj": {
+    "D:\\2024\\3-1\\AS\\teamproject\\library\\ChatLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gifou\\LiarDemo\\library\\ChatLib.csproj",
+        "projectUniqueName": "D:\\2024\\3-1\\AS\\teamproject\\library\\ChatLib.csproj",
         "projectName": "ChatLib",
-        "projectPath": "C:\\Users\\gifou\\LiarDemo\\library\\ChatLib.csproj",
-        "packagesPath": "C:\\Users\\gifou\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gifou\\LiarDemo\\library\\obj\\",
+        "projectPath": "D:\\2024\\3-1\\AS\\teamproject\\library\\ChatLib.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\2024\\3-1\\AS\\teamproject\\library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gifou\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -146,20 +128,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

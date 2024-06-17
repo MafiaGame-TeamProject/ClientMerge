@@ -16,6 +16,9 @@
     <Compile Update="suggestWord_form.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Vote_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="waitingRoom_form.cs">
       <SubType>Form</SubType>
     </Compile>

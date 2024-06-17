@@ -45,9 +45,10 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(68, 33);
+            pictureBox1.Location = new Point(61, 30);
+            pictureBox1.Margin = new Padding(6);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 65);
+            pictureBox1.Size = new Size(100, 60);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -55,11 +56,12 @@
             // 
             plainTextLbl.AutoSize = true;
             plainTextLbl.BackColor = Color.Transparent;
-            plainTextLbl.Font = new Font("맑은 고딕", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            plainTextLbl.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             plainTextLbl.ForeColor = Color.White;
-            plainTextLbl.Location = new Point(124, 33);
+            plainTextLbl.Location = new Point(137, 30);
+            plainTextLbl.Margin = new Padding(6, 0, 6, 0);
             plainTextLbl.Name = "plainTextLbl";
-            plainTextLbl.Size = new Size(183, 65);
+            plainTextLbl.Size = new Size(141, 50);
             plainTextLbl.TabIndex = 1;
             plainTextLbl.Text = "제시어:";
             // 
@@ -67,11 +69,12 @@
             // 
             wordLbl.AutoSize = true;
             wordLbl.BackColor = Color.Transparent;
-            wordLbl.Font = new Font("맑은 고딕", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            wordLbl.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             wordLbl.ForeColor = Color.White;
-            wordLbl.Location = new Point(297, 33);
+            wordLbl.Location = new Point(285, 30);
+            wordLbl.Margin = new Padding(6, 0, 6, 0);
             wordLbl.Name = "wordLbl";
-            wordLbl.Size = new Size(124, 65);
+            wordLbl.Size = new Size(96, 50);
             wordLbl.TabIndex = 2;
             wordLbl.Text = "의사";
             // 
@@ -79,9 +82,10 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1069, 46);
+            pictureBox2.Location = new Point(2138, 92);
+            pictureBox2.Margin = new Padding(6);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(100, 50);
+            pictureBox2.Size = new Size(200, 100);
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
             // 
@@ -91,20 +95,22 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("맑은 고딕", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(1117, 46);
+            label1.Location = new Point(2234, 92);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(110, 50);
+            label1.Size = new Size(222, 99);
             label1.TabIndex = 4;
             label1.Text = "03:00";
             // 
             // txtInput
             // 
             txtInput.BackColor = Color.FromArgb(88, 79, 79);
-            txtInput.Font = new Font("맑은 고딕", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            txtInput.Font = new Font("맑은 고딕", 19.875F, FontStyle.Regular, GraphicsUnit.Point);
             txtInput.ForeColor = Color.White;
-            txtInput.Location = new Point(124, 607);
+            txtInput.Location = new Point(101, 607);
+            txtInput.Margin = new Padding(6);
             txtInput.Name = "txtInput";
-            txtInput.Size = new Size(1045, 71);
+            txtInput.Size = new Size(1067, 78);
             txtInput.TabIndex = 5;
             // 
             // sendBtn
@@ -112,9 +118,10 @@
             sendBtn.BackColor = Color.FromArgb(88, 79, 79);
             sendBtn.Font = new Font("맑은 고딕", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             sendBtn.ForeColor = Color.White;
-            sendBtn.Location = new Point(1069, 617);
+            sendBtn.Location = new Point(1001, 617);
+            sendBtn.Margin = new Padding(6);
             sendBtn.Name = "sendBtn";
-            sendBtn.Size = new Size(89, 49);
+            sendBtn.Size = new Size(155, 57);
             sendBtn.TabIndex = 6;
             sendBtn.Text = "Send";
             sendBtn.UseVisualStyleBackColor = false;
@@ -124,19 +131,20 @@
             // 
             chatPanel.AutoScroll = true;
             chatPanel.BackColor = Color.Transparent;
-            chatPanel.Location = new Point(37, 104);
+            chatPanel.Location = new Point(46, 118);
+            chatPanel.Margin = new Padding(6);
             chatPanel.Name = "chatPanel";
-            chatPanel.Size = new Size(1200, 486);
+            chatPanel.Size = new Size(1184, 460);
             chatPanel.TabIndex = 7;
             // 
             // ChattingForm
             // 
-            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleDimensions = new SizeF(192F, 192F);
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1280, 720);
+            ClientSize = new Size(1274, 719);
             Controls.Add(chatPanel);
             Controls.Add(sendBtn);
             Controls.Add(txtInput);
@@ -146,9 +154,10 @@
             Controls.Add(plainTextLbl);
             Controls.Add(pictureBox1);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(6);
             Name = "ChattingForm";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

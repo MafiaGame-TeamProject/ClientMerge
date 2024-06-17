@@ -1,14 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AzEm4/FqSuGjnPUVyx6ttAstne9vqKYNzvrqLk6/1wJiXzwEpdVd9rJ6/D4fs3oACD7nKj+p5DL6G9UwEZJT4w==",
+  "dgSpecHash": "kb6cZobFW5l01YDaPw4E6kNBVWtmsY3s6v3nM4rjegSr0yDaibhIOcEF5oo8O+OKejgVjWLX6RcNTd0YHHi/Tg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gifou\\LiarDemo\\ClientMerge\\Client\\WinFormClient.csproj",
+  "projectFilePath": "D:\\2024\\3-1\\AS\\teamproject\\ClientMerge\\Client\\WinFormClient.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\gifou\\.nuget\\packages\\krypton.toolkit\\80.24.3.64\\krypton.toolkit.80.24.3.64.nupkg.sha512",
-    "C:\\Users\\gifou\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.18\\microsoft.windowsdesktop.app.ref.7.0.18.nupkg.sha512",
-    "C:\\Users\\gifou\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.18\\microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
-    "C:\\Users\\gifou\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.18\\microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512",
-    "C:\\Users\\gifou\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.18\\microsoft.netcore.app.host.win-x64.7.0.18.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\krypton.toolkit\\80.24.3.64\\krypton.toolkit.80.24.3.64.nupkg.sha512"
   ],
   "logs": []
 }
