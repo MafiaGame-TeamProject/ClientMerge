@@ -70,6 +70,7 @@
             name1_lbl.Size = new Size(155, 45);
             name1_lbl.TabIndex = 3;
             name1_lbl.Text = "name";
+            name1_lbl.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // name2_lbl
             // 
@@ -81,6 +82,7 @@
             name2_lbl.Size = new Size(155, 45);
             name2_lbl.TabIndex = 4;
             name2_lbl.Text = "name";
+            name2_lbl.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // name3_lbl
             // 
@@ -92,6 +94,7 @@
             name3_lbl.Size = new Size(155, 45);
             name3_lbl.TabIndex = 5;
             name3_lbl.Text = "name";
+            name3_lbl.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // name4_lbl
             // 
@@ -103,6 +106,7 @@
             name4_lbl.Size = new Size(155, 45);
             name4_lbl.TabIndex = 6;
             name4_lbl.Text = "name";
+            name4_lbl.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // button1
             // 

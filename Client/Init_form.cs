@@ -71,11 +71,21 @@ namespace WinFormClient
                 ChatState.Disconnect => $"{hub.UserName}님이 연결을 끊었습니다.",
                 _ => $"{hub.UserName}: {hub.Message}"
             };
+            if (hub.Message.StartsWith("UserCount:"))
+            {
+                var usercnt = Convert.ToInt32(hub.Message.Substring("UserCount:".Length));
+
+                if (usercnt > 4)
+                {
+                    MessageBox.Show("해당 방의 유저 수가 4명이라 입장할 수 없습니다.");
+                    this.Close();
+                }
+            }
 
             if (hub.Message.StartsWith("USER_LIST:"))
             {
                 var users = hub.Message.Substring("USER_LIST:".Length).Split(',').ToList();
-                if (waitingRoomForm == null || waitingRoomForm.IsDisposed)
+                if ((waitingRoomForm == null || waitingRoomForm.IsDisposed))
                 {
                     waitingRoomForm = new waitingRoom_form(_client, _clientHandler, UserName, chattingForm);
                     waitingRoomForm.UserInfo(RoomId, users);
@@ -174,6 +184,11 @@ namespace WinFormClient
             {
                 RoomId = RoomId,
                 UserName = UserName,
+            });
+
+            _clientHandler.Send(new ChatHub
+            {
+                Message = "plzUserCount",
             });
         }
 

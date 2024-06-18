@@ -20,7 +20,7 @@ namespace WaitingRoom
         private string _userName;
         private string _word;
         private ChattingForm _chattingForm;
-        
+
 
         public waitingRoom_form(ChatClient client, ClientHandler handler, string UserName, ChattingForm chattingForm)
         {
@@ -29,10 +29,10 @@ namespace WaitingRoom
             _clientHandler = handler;
             _userName = UserName;
             _chattingForm = chattingForm;
-            
+
 
             labels = new Label[] { name1_lbl, name2_lbl, name3_lbl, name4_lbl };
-            _client.Received += Client_Received;
+            /*_client.Received += Client_Received;*/
         }
 
         public void UserInfo(int roomId, List<string> users)
@@ -54,10 +54,11 @@ namespace WaitingRoom
             for (int i = 0; i < newList.Count && i < labels.Length; i++)
             {
                 labels[i].Text = newList[i];
+                button1.Text = "유저 " + newList.Count + "/4";
             }
         }
 
-        private void Client_Received(object sender, ChatLib.Events.ChatEventArgs e)
+        /*private void Client_Received(object sender, ChatLib.Events.ChatEventArgs e)
         {
             var hub = e.Hub;
             if (hub.Message.StartsWith("WORD:"))
@@ -70,7 +71,7 @@ namespace WaitingRoom
                     this.Hide();
                 });
             }
-        }
+        }*/
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -84,8 +85,13 @@ namespace WaitingRoom
                 labels[i].Parent = UsersView;
                 labels[i].BackColor = Color.Transparent;
                 labels[i].ForeColor = Color.White;
-                labels[i].Left = (UsersView.Width - labels[i].Width) / 2 - 20;
-                labels[i].Top = UsersView.Top + 20 + (i * (labels[i].Height + 26));
+                if (i == 0)
+                    labels[i].Left = (UsersView.Width - labels[i].Width) / 2 - 20;
+                else
+                {
+                    labels[i].Left = labels[0].Left;
+                }
+                labels[i].Top = UsersView.Top + 40 + (i * (labels[i].Height + 52));
             }
         }
 

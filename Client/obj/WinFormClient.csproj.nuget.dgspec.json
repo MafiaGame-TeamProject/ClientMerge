@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\YuJinLee\\Desktop\\LiarMerge\\ClientMerge\\Client\\WinFormClient.csproj": {}
+    "D:\\2024\\3-1\\AS\\newAPP\\ClientMerge\\Client\\WinFormClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\YuJinLee\\Desktop\\LiarMerge\\ClientMerge\\Client\\WinFormClient.csproj": {
+    "D:\\2024\\3-1\\AS\\newAPP\\ClientMerge\\Client\\WinFormClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\YuJinLee\\Desktop\\LiarMerge\\ClientMerge\\Client\\WinFormClient.csproj",
+        "projectUniqueName": "D:\\2024\\3-1\\AS\\newAPP\\ClientMerge\\Client\\WinFormClient.csproj",
         "projectName": "WinFormClient",
-        "projectPath": "C:\\Users\\YuJinLee\\Desktop\\LiarMerge\\ClientMerge\\Client\\WinFormClient.csproj",
-        "packagesPath": "C:\\Users\\YuJinLee\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\YuJinLee\\Desktop\\LiarMerge\\ClientMerge\\Client\\obj\\",
+        "projectPath": "D:\\2024\\3-1\\AS\\newAPP\\ClientMerge\\Client\\WinFormClient.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\2024\\3-1\\AS\\newAPP\\ClientMerge\\Client\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\YuJinLee\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\YuJinLee\\Desktop\\LiarMerge\\library\\ChatLib.csproj": {
-                "projectPath": "C:\\Users\\YuJinLee\\Desktop\\LiarMerge\\library\\ChatLib.csproj"
+              "D:\\2024\\3-1\\AS\\newAPP\\library\\ChatLib.csproj": {
+                "projectPath": "D:\\2024\\3-1\\AS\\newAPP\\library\\ChatLib.csproj"
               }
             }
           }
@@ -78,25 +73,21 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\YuJinLee\\Desktop\\LiarMerge\\library\\ChatLib.csproj": {
+    "D:\\2024\\3-1\\AS\\newAPP\\library\\ChatLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\YuJinLee\\Desktop\\LiarMerge\\library\\ChatLib.csproj",
+        "projectUniqueName": "D:\\2024\\3-1\\AS\\newAPP\\library\\ChatLib.csproj",
         "projectName": "ChatLib",
-        "projectPath": "C:\\Users\\YuJinLee\\Desktop\\LiarMerge\\library\\ChatLib.csproj",
-        "packagesPath": "C:\\Users\\YuJinLee\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\YuJinLee\\Desktop\\LiarMerge\\library\\obj\\",
+        "projectPath": "D:\\2024\\3-1\\AS\\newAPP\\library\\ChatLib.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\2024\\3-1\\AS\\newAPP\\library\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\YuJinLee\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,7 +95,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -143,7 +133,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }
