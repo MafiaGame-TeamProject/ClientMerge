@@ -18,7 +18,7 @@ namespace Vote
         private List<Label> labels;
         private PictureBox pictureBoxButton;
 
-        private int remainingTime = 60; // 1분
+        private int remainingTime = 10; // 1분
 
 
         List<string> _userList = new List<string>();

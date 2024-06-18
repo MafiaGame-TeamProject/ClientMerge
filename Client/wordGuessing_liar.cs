@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ChatLib.Handlers;
+using ChatLib.Models;
+using ChatLib.Sockets;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,27 +12,26 @@ using System.Threading.Tasks;
 //using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
-namespace 제시어맞추기_라이어화면_
+namespace WinFormClient
 {
-    public partial class Form1 : Form
+    public partial class wordGuessing : Form
     {
-        private int remainingTime = 180; // 3분(180초)
+        private int remainingTime = 60; // 1분
+        ChatClient _client;
+        ClientHandler _clientHandler;
+        string _userName;
 
-        public Form1()
+        public wordGuessing(ChatClient client, ClientHandler handler, string userName)
         {
             InitializeComponent();
+            _client = client;
+            _clientHandler = handler;
+            _userName = userName;
 
             timer1 = new System.Windows.Forms.Timer();
             timer1.Interval = 1000; // 1초 간격
             timer1.Tick += Timer1_Tick;
-            this.Load += Form1_Load;
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // 폼이 로드될 때 타이머 시작
-            timer1.Start();
+            this.Load += wordGuessing_Load;
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -45,8 +47,33 @@ namespace 제시어맞추기_라이어화면_
             if (remainingTime <= 0)
             {
                 timer1.Stop();
-                //MessageBox.Show("Time's up!");
+
+                string msg = txtBox.Text;
+                if (!string.IsNullOrWhiteSpace(msg))
+                {
+                    _clientHandler.Send(new ChatHub
+                    {
+                        Message = "VOTED:" + msg,
+                    });
+                }
             }
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            string msg = txtBox.Text;
+            if (!string.IsNullOrWhiteSpace(msg))
+            {
+                _clientHandler.Send(new ChatHub
+                {
+                    Message = "VOTED:" + msg,
+                });
+            }
+        }
+
+        private void wordGuessing_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
     }
 }

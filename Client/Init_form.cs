@@ -18,9 +18,14 @@ namespace WinFormClient
         private ClientHandler? _clientHandler;
         private waitingRoom_form waitingRoomForm;
         private ChattingForm chattingForm;
+        private Vote_form voteForm;
+
         private bool voteFormShown = false;
 
-        private string liarAnswer;
+        // 수정한 부분
+        List<string> _totalUsers; // 전체 유저 리스트
+        List<string> _words; // 서버에서 전송받은 word split
+        private string _liarAnswer; // 라이어가 전송한 제시어
 
         private int RoomId => (int)nudRoomId.Value;
         private string UserName => txtName.Text;
@@ -88,6 +93,9 @@ namespace WinFormClient
             if (hub.Message.StartsWith("WORD:"))
             {
                 var words = hub.Message.Substring("WORD:".Length).Split(',').ToList();
+                // 수정한 부분
+                _words = words;
+
                 BeginInvoke((MethodInvoker)delegate
                 {
                     var suggestWordForm = new suggestWord_form(_client!, _clientHandler!, UserName, words, chattingForm);
@@ -111,13 +119,15 @@ namespace WinFormClient
             if (hub.Message.StartsWith("VOTE_USER_LIST:"))
             {
                 var users = hub.Message.Substring("VOTE_USER_LIST:".Length).Split(',').ToList();
-                
+                // 수정한 부분
+                _totalUsers = users;
+
                 BeginInvoke((MethodInvoker)delegate
                 {
 
                     if (!voteFormShown) // Vote 창이 이미 보여진 경우 방지
                     {
-                        var voteForm = new Vote_form(_client, _clientHandler, UserName, users);
+                        voteForm = new Vote_form(_client, _clientHandler, UserName, users);
                         voteForm.Show();
                         chattingForm.Hide();
                         voteFormShown = true;
@@ -126,11 +136,25 @@ namespace WinFormClient
                 });
             }
 
+            // 수정한 부분
+            if (hub.Message.StartsWith("VOTEDUSER:"))
+            {
+                var _votedUser = hub.Message.Substring("VOTEDUSER:".Length);
+
+                BeginInvoke((MethodInvoker)delegate
+                {
+                    var voteResultForm = new voteResult(_client, _clientHandler, UserName, _words, _totalUsers, _votedUser);
+                    voteResultForm.Show();
+                    voteForm.Hide();
+                });
+            }
+
+
             // 서버에서 라이어 제시어를 받을 때
             if (hub.Message.StartsWith("ANSWERWORD:"))
             {
                 var answer = hub.Message.Substring("ANSWERWORD:".Length);
-                this.liarAnswer = answer;
+                this._liarAnswer = answer;
             }
         }
 

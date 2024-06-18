@@ -1,4 +1,4 @@
-﻿namespace 게임종료
+﻿namespace WinFormClient
 {
     partial class gameEnd
     {
@@ -42,10 +42,9 @@
             lableWinner.AutoSize = true;
             lableWinner.Font = new Font("휴먼둥근헤드라인", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
             lableWinner.ForeColor = Color.White;
-            lableWinner.Location = new Point(402, 60);
-            lableWinner.Margin = new Padding(6, 0, 6, 0);
+            lableWinner.Location = new Point(201, 30);
             lableWinner.Name = "lableWinner";
-            lableWinner.Size = new Size(480, 146);
+            lableWinner.Size = new Size(239, 72);
             lableWinner.TabIndex = 0;
             lableWinner.Text = "시민팀이 \r\n승리했습니다!";
             lableWinner.TextAlign = ContentAlignment.MiddleCenter;
@@ -55,10 +54,9 @@
             labelUser.AutoSize = true;
             labelUser.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelUser.ForeColor = Color.White;
-            labelUser.Location = new Point(56, 240);
-            labelUser.Margin = new Padding(6, 0, 6, 0);
+            labelUser.Location = new Point(28, 120);
             labelUser.Name = "labelUser";
-            labelUser.Size = new Size(1161, 50);
+            labelUser.Size = new Size(583, 25);
             labelUser.TabIndex = 1;
             labelUser.Text = "라이어: User1 / 시민: User2, User3, User4";
             // 
@@ -67,10 +65,9 @@
             labelWord.AutoSize = true;
             labelWord.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelWord.ForeColor = Color.White;
-            labelWord.Location = new Point(490, 312);
-            labelWord.Margin = new Padding(6, 0, 6, 0);
+            labelWord.Location = new Point(245, 156);
             labelWord.Name = "labelWord";
-            labelWord.Size = new Size(303, 50);
+            labelWord.Size = new Size(153, 25);
             labelWord.TabIndex = 2;
             labelWord.Text = "제시어: 의사";
             // 
@@ -78,10 +75,9 @@
             // 
             kryptonButton4.CornerRoundingRadius = 5F;
             kryptonButton4.Enabled = false;
-            kryptonButton4.Location = new Point(420, 536);
-            kryptonButton4.Margin = new Padding(6);
+            kryptonButton4.Location = new Point(210, 268);
             kryptonButton4.Name = "kryptonButton4";
-            kryptonButton4.Size = new Size(440, 110);
+            kryptonButton4.Size = new Size(220, 55);
             kryptonButton4.StateCommon.Back.Color1 = Color.FromArgb(10, 10, 14);
             kryptonButton4.StateCommon.Back.Color2 = Color.FromArgb(10, 10, 14);
             kryptonButton4.StateCommon.Border.Color1 = Color.Transparent;
@@ -98,10 +94,9 @@
             // 
             kryptonButton6.CornerRoundingRadius = 5F;
             kryptonButton6.Enabled = false;
-            kryptonButton6.Location = new Point(420, 404);
-            kryptonButton6.Margin = new Padding(6);
+            kryptonButton6.Location = new Point(210, 202);
             kryptonButton6.Name = "kryptonButton6";
-            kryptonButton6.Size = new Size(440, 110);
+            kryptonButton6.Size = new Size(220, 55);
             kryptonButton6.StateCommon.Back.Color1 = Color.FromArgb(10, 10, 14);
             kryptonButton6.StateCommon.Back.Color2 = Color.FromArgb(10, 10, 14);
             kryptonButton6.StateCommon.Border.Color1 = Color.Transparent;
@@ -117,8 +112,7 @@
             // btnLobby
             // 
             btnLobby.ButtonStyle = Krypton.Toolkit.ButtonStyle.Alternate;
-            btnLobby.Location = new Point(432, 412);
-            btnLobby.Margin = new Padding(6);
+            btnLobby.Location = new Point(216, 206);
             btnLobby.Name = "btnLobby";
             btnLobby.OverrideDefault.Back.Color1 = Color.FromArgb(10, 10, 14);
             btnLobby.OverrideDefault.Back.Color2 = Color.FromArgb(10, 10, 14);
@@ -130,7 +124,7 @@
             btnLobby.OverrideFocus.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             btnLobby.OverrideFocus.Border.Rounding = 5F;
             btnLobby.OverrideFocus.Border.Width = 2;
-            btnLobby.Size = new Size(418, 90);
+            btnLobby.Size = new Size(209, 45);
             btnLobby.StateCommon.Back.Color1 = Color.FromArgb(10, 10, 14);
             btnLobby.StateCommon.Back.Color2 = Color.FromArgb(10, 10, 14);
             btnLobby.StateCommon.Border.Color1 = Color.DimGray;
@@ -143,12 +137,12 @@
             btnLobby.StateCommon.Content.ShortText.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             btnLobby.TabIndex = 22;
             btnLobby.Values.Text = "로비로 돌아가기";
+            btnLobby.Click += btnLobby_Click;
             // 
             // btnExit
             // 
             btnExit.ButtonStyle = Krypton.Toolkit.ButtonStyle.Alternate;
-            btnExit.Location = new Point(432, 546);
-            btnExit.Margin = new Padding(6);
+            btnExit.Location = new Point(216, 273);
             btnExit.Name = "btnExit";
             btnExit.OverrideDefault.Back.Color1 = Color.FromArgb(10, 10, 14);
             btnExit.OverrideDefault.Back.Color2 = Color.FromArgb(10, 10, 14);
@@ -160,7 +154,7 @@
             btnExit.OverrideFocus.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             btnExit.OverrideFocus.Border.Rounding = 5F;
             btnExit.OverrideFocus.Border.Width = 2;
-            btnExit.Size = new Size(418, 90);
+            btnExit.Size = new Size(209, 45);
             btnExit.StateCommon.Back.Color1 = Color.FromArgb(10, 10, 14);
             btnExit.StateCommon.Back.Color2 = Color.FromArgb(10, 10, 14);
             btnExit.StateCommon.Border.Color1 = Color.DimGray;
@@ -173,15 +167,16 @@
             btnExit.StateCommon.Content.ShortText.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             btnExit.TabIndex = 24;
             btnExit.Values.Text = "종료하기";
+            btnExit.Click += btnExit_Click;
             // 
             // gameEnd
             // 
-            AutoScaleDimensions = new SizeF(192F, 192F);
+            AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(25, 23, 39);
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1280, 720);
+            ClientSize = new Size(640, 360);
             Controls.Add(btnExit);
             Controls.Add(labelWord);
             Controls.Add(labelUser);
@@ -191,10 +186,9 @@
             Controls.Add(kryptonButton4);
             ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Margin = new Padding(6);
             Name = "gameEnd";
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "MafiaGame";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Form1";
             Load += gameEnd_Load;
             ResumeLayout(false);
             PerformLayout();
