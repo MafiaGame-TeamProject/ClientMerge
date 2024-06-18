@@ -40,8 +40,7 @@
             // 
             // suggestWord_form
             // 
-            AutoScaleDimensions = new SizeF(192F, 192F);
-            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoScaleMode = AutoScaleMode.None;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = WinFormClient.Properties.Resources.제시어_분배__1_;
             BackgroundImageLayout = ImageLayout.Zoom;

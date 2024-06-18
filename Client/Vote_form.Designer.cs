@@ -86,8 +86,7 @@
             // 
             // Vote_form
             // 
-            AutoScaleDimensions = new SizeF(192F, 192F);
-            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoScaleMode = AutoScaleMode.None;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = WinFormClient.Properties.Resources.VoteBackground;
             BackgroundImageLayout = ImageLayout.Zoom;

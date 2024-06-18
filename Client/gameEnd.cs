@@ -36,7 +36,7 @@ namespace WinFormClient
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void gameEnd_Load(object sender, EventArgs e)

@@ -136,10 +136,6 @@ D:\2024\3-1\AS\newAPP\ClientMerge\Client\obj\Debug\net7.0-windows\refint\WinForm
 D:\2024\3-1\AS\newAPP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.pdb
 D:\2024\3-1\AS\newAPP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.genruntimeconfig.cache
 D:\2024\3-1\AS\newAPP\ClientMerge\Client\obj\Debug\net7.0-windows\ref\WinFormClient.dll
-D:\2024\3-1\AS\teamproject\ClientMerge\Client\obj\Debug\net7.0-windows\게임종료.gameEnd.resources
-D:\2024\3-1\AS\teamproject\ClientMerge\Client\obj\Debug\net7.0-windows\merge_citizen.voteResult.resources
-D:\2024\3-1\AS\teamproject\ClientMerge\Client\obj\Debug\net7.0-windows\merge_citizen.wordGuessing_citizen.resources
-D:\2024\3-1\AS\teamproject\ClientMerge\Client\obj\Debug\net7.0-windows\제시어맞추기_라이어화면_.Form1.resources
 C:\Users\YuJinLee\Desktop\LiarMerge\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.exe
 C:\Users\YuJinLee\Desktop\LiarMerge\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.deps.json
 C:\Users\YuJinLee\Desktop\LiarMerge\ClientMerge\Client\bin\Debug\net7.0-windows\WinFormClient.runtimeconfig.json
@@ -177,3 +173,7 @@ D:\2024\3-1\AS\newAPP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.
 D:\2024\3-1\AS\newAPP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.voteResult.resources
 D:\2024\3-1\AS\newAPP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.wordGuessing_citizen.resources
 D:\2024\3-1\AS\newAPP\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.wordGuessing.resources
+D:\2024\3-1\AS\teamproject\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.gameEnd.resources
+D:\2024\3-1\AS\teamproject\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.voteResult.resources
+D:\2024\3-1\AS\teamproject\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.wordGuessing_citizen.resources
+D:\2024\3-1\AS\teamproject\ClientMerge\Client\obj\Debug\net7.0-windows\WinFormClient.wordGuessing.resources

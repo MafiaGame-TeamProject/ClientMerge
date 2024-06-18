@@ -57,9 +57,10 @@
             labelScreen.BackColor = Color.Transparent;
             labelScreen.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelScreen.ForeColor = Color.White;
-            labelScreen.Location = new Point(62, 17);
+            labelScreen.Location = new Point(124, 34);
+            labelScreen.Margin = new Padding(6, 0, 6, 0);
             labelScreen.Name = "labelScreen";
-            labelScreen.Size = new Size(168, 25);
+            labelScreen.Size = new Size(334, 50);
             labelScreen.TabIndex = 5;
             labelScreen.Text = "제시어 맞추기";
             // 
@@ -69,9 +70,10 @@
             timeLabel.BackColor = Color.Transparent;
             timeLabel.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             timeLabel.ForeColor = Color.White;
-            timeLabel.Location = new Point(530, 17);
+            timeLabel.Location = new Point(1060, 34);
+            timeLabel.Margin = new Padding(6, 0, 6, 0);
             timeLabel.Name = "timeLabel";
-            timeLabel.Size = new Size(72, 25);
+            timeLabel.Size = new Size(141, 50);
             timeLabel.TabIndex = 11;
             timeLabel.Text = "1:00";
             // 
@@ -83,9 +85,10 @@
             // 
             pictureBoxTime.BackColor = Color.Transparent;
             pictureBoxTime.Image = (Image)resources.GetObject("pictureBoxTime.Image");
-            pictureBoxTime.Location = new Point(498, 17);
+            pictureBoxTime.Location = new Point(996, 34);
+            pictureBoxTime.Margin = new Padding(6, 6, 6, 6);
             pictureBoxTime.Name = "pictureBoxTime";
-            pictureBoxTime.Size = new Size(26, 27);
+            pictureBoxTime.Size = new Size(52, 54);
             pictureBoxTime.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxTime.TabIndex = 21;
             pictureBoxTime.TabStop = false;
@@ -94,9 +97,10 @@
             // 
             pictureBoxSun.BackColor = Color.Transparent;
             pictureBoxSun.Image = (Image)resources.GetObject("pictureBoxSun.Image");
-            pictureBoxSun.Location = new Point(30, 12);
+            pictureBoxSun.Location = new Point(60, 24);
+            pictureBoxSun.Margin = new Padding(6, 6, 6, 6);
             pictureBoxSun.Name = "pictureBoxSun";
-            pictureBoxSun.Size = new Size(28, 35);
+            pictureBoxSun.Size = new Size(56, 70);
             pictureBoxSun.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxSun.TabIndex = 20;
             pictureBoxSun.TabStop = false;
@@ -104,7 +108,8 @@
             // btnTopic
             // 
             btnTopic.Enabled = false;
-            btnTopic.Location = new Point(232, 116);
+            btnTopic.Location = new Point(464, 232);
+            btnTopic.Margin = new Padding(6, 6, 6, 6);
             btnTopic.Name = "btnTopic";
             btnTopic.OverrideDefault.Back.Color1 = Color.FromArgb(31, 28, 32);
             btnTopic.OverrideDefault.Back.Color2 = Color.FromArgb(31, 28, 32);
@@ -113,7 +118,7 @@
             btnTopic.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTopic.OverrideDefault.Border.Rounding = 10F;
             btnTopic.OverrideDefault.Border.Width = 1;
-            btnTopic.Size = new Size(164, 45);
+            btnTopic.Size = new Size(328, 90);
             btnTopic.StateCommon.Back.Color1 = Color.FromArgb(31, 28, 32);
             btnTopic.StateCommon.Back.Color2 = Color.FromArgb(31, 28, 32);
             btnTopic.StateCommon.Border.Color1 = Color.FromArgb(252, 238, 182);
@@ -127,9 +132,10 @@
             // panelLine
             // 
             panelLine.BackColor = Color.FromArgb(252, 238, 182);
-            panelLine.Location = new Point(309, 122);
+            panelLine.Location = new Point(618, 244);
+            panelLine.Margin = new Padding(6, 6, 6, 6);
             panelLine.Name = "panelLine";
-            panelLine.Size = new Size(1, 30);
+            panelLine.Size = new Size(2, 60);
             panelLine.TabIndex = 26;
             // 
             // labelWord
@@ -138,9 +144,10 @@
             labelWord.BackColor = Color.FromArgb(31, 28, 32);
             labelWord.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelWord.ForeColor = Color.White;
-            labelWord.Location = new Point(321, 124);
+            labelWord.Location = new Point(642, 248);
+            labelWord.Margin = new Padding(6, 0, 6, 0);
             labelWord.Name = "labelWord";
-            labelWord.Size = new Size(60, 25);
+            labelWord.Size = new Size(118, 50);
             labelWord.TabIndex = 12;
             labelWord.Text = "직업";
             // 
@@ -150,15 +157,17 @@
             labelTopic.BackColor = Color.FromArgb(31, 28, 32);
             labelTopic.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelTopic.ForeColor = Color.White;
-            labelTopic.Location = new Point(238, 124);
+            labelTopic.Location = new Point(476, 248);
+            labelTopic.Margin = new Padding(6, 0, 6, 0);
             labelTopic.Name = "labelTopic";
-            labelTopic.Size = new Size(60, 25);
+            labelTopic.Size = new Size(118, 50);
             labelTopic.TabIndex = 11;
             labelTopic.Text = "주제";
             // 
             // btnSend
             // 
-            btnSend.Location = new Point(390, 37);
+            btnSend.Location = new Point(780, 74);
+            btnSend.Margin = new Padding(6, 6, 6, 6);
             btnSend.Name = "btnSend";
             btnSend.OverrideDefault.Back.Color1 = Color.FromArgb(31, 28, 32);
             btnSend.OverrideDefault.Back.Color2 = Color.FromArgb(31, 28, 32);
@@ -167,7 +176,7 @@
             btnSend.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             btnSend.OverrideDefault.Border.Rounding = 10F;
             btnSend.OverrideDefault.Border.Width = 1;
-            btnSend.Size = new Size(105, 38);
+            btnSend.Size = new Size(210, 76);
             btnSend.StateCommon.Back.Color1 = Color.FromArgb(31, 28, 32);
             btnSend.StateCommon.Back.Color2 = Color.FromArgb(31, 28, 32);
             btnSend.StateCommon.Border.Color1 = Color.FromArgb(252, 238, 182);
@@ -187,9 +196,10 @@
             panelBackground.Controls.Add(btnSend);
             panelBackground.Controls.Add(txtBox);
             panelBackground.Controls.Add(txtBackground);
-            panelBackground.Location = new Point(76, 135);
+            panelBackground.Location = new Point(152, 270);
+            panelBackground.Margin = new Padding(6, 6, 6, 6);
             panelBackground.Name = "panelBackground";
-            panelBackground.Size = new Size(514, 108);
+            panelBackground.Size = new Size(1028, 216);
             panelBackground.StateCommon.Color1 = Color.FromArgb(24, 21, 24);
             panelBackground.TabIndex = 30;
             // 
@@ -197,18 +207,20 @@
             // 
             Circle.BackColor = Color.Transparent;
             Circle.Image = (Image)resources.GetObject("Circle.Image");
-            Circle.Location = new Point(488, 50);
+            Circle.Location = new Point(976, 100);
+            Circle.Margin = new Padding(6, 6, 6, 6);
             Circle.Name = "Circle";
-            Circle.Size = new Size(10, 10);
+            Circle.Size = new Size(20, 20);
             Circle.SizeMode = PictureBoxSizeMode.StretchImage;
             Circle.TabIndex = 31;
             Circle.TabStop = false;
             // 
             // txtBox
             // 
-            txtBox.Location = new Point(16, 35);
+            txtBox.Location = new Point(32, 70);
+            txtBox.Margin = new Padding(6, 6, 6, 6);
             txtBox.Name = "txtBox";
-            txtBox.Size = new Size(366, 41);
+            txtBox.Size = new Size(732, 69);
             txtBox.StateCommon.Back.Color1 = Color.FromArgb(31, 28, 32);
             txtBox.StateCommon.Border.Color1 = Color.FromArgb(252, 238, 182);
             txtBox.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -221,9 +233,10 @@
             // txtBackground
             // 
             txtBackground.Enabled = false;
-            txtBackground.Location = new Point(5, 17);
+            txtBackground.Location = new Point(10, 34);
+            txtBackground.Margin = new Padding(6, 6, 6, 6);
             txtBackground.Name = "txtBackground";
-            txtBackground.Size = new Size(502, 81);
+            txtBackground.Size = new Size(1004, 149);
             txtBackground.StateCommon.Back.Color1 = Color.FromArgb(24, 21, 24);
             txtBackground.StateCommon.Border.Color1 = Color.FromArgb(252, 238, 182);
             txtBackground.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -235,12 +248,11 @@
             // 
             // wordGuessing
             // 
-            AutoScaleDimensions = new SizeF(96F, 96F);
-            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoScaleMode = AutoScaleMode.None;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(640, 360);
+            ClientSize = new Size(1280, 720);
             Controls.Add(labelWord);
             Controls.Add(labelTopic);
             Controls.Add(panelLine);
@@ -251,6 +263,7 @@
             Controls.Add(labelScreen);
             Controls.Add(panelBackground);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(6, 6, 6, 6);
             Name = "wordGuessing";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "liar";

@@ -50,9 +50,10 @@
             labelDie.BackColor = Color.FromArgb(15, 17, 24);
             labelDie.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelDie.ForeColor = Color.White;
-            labelDie.Location = new Point(158, 130);
+            labelDie.Location = new Point(316, 260);
+            labelDie.Margin = new Padding(6, 0, 6, 0);
             labelDie.Name = "labelDie";
-            labelDie.Size = new Size(330, 25);
+            labelDie.Size = new Size(657, 50);
             labelDie.TabIndex = 2;
             labelDie.Text = "user1님이 처형당했습니다.";
             // 
@@ -62,9 +63,10 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(62, 17);
+            label4.Location = new Point(124, 34);
+            label4.Margin = new Padding(6, 0, 6, 0);
             label4.Name = "label4";
-            label4.Size = new Size(144, 25);
+            label4.Size = new Size(286, 50);
             label4.TabIndex = 12;
             label4.Text = "처형자 공개";
             // 
@@ -73,9 +75,10 @@
             panel1.BackColor = Color.FromArgb(15, 17, 24);
             panel1.Controls.Add(labelJob);
             panel1.Controls.Add(pictureBoxLine);
-            panel1.Location = new Point(108, 158);
+            panel1.Location = new Point(216, 316);
+            panel1.Margin = new Padding(6, 6, 6, 6);
             panel1.Name = "panel1";
-            panel1.Size = new Size(427, 112);
+            panel1.Size = new Size(854, 224);
             panel1.TabIndex = 16;
             // 
             // labelJob
@@ -84,9 +87,10 @@
             labelJob.BackColor = Color.Transparent;
             labelJob.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelJob.ForeColor = Color.White;
-            labelJob.Location = new Point(147, 22);
+            labelJob.Location = new Point(294, 44);
+            labelJob.Margin = new Padding(6, 0, 6, 0);
             labelJob.Name = "labelJob";
-            labelJob.Size = new Size(143, 50);
+            labelJob.Size = new Size(284, 100);
             labelJob.TabIndex = 18;
             labelJob.Text = "User1님은\r\n시민입니다.";
             labelJob.TextAlign = ContentAlignment.MiddleCenter;
@@ -95,9 +99,10 @@
             // 
             pictureBoxLine.BackColor = Color.FromArgb(15, 17, 24);
             pictureBoxLine.Image = (Image)resources.GetObject("pictureBoxLine.Image");
-            pictureBoxLine.Location = new Point(0, 75);
+            pictureBoxLine.Location = new Point(0, 150);
+            pictureBoxLine.Margin = new Padding(6, 6, 6, 6);
             pictureBoxLine.Name = "pictureBoxLine";
-            pictureBoxLine.Size = new Size(427, 37);
+            pictureBoxLine.Size = new Size(854, 74);
             pictureBoxLine.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxLine.TabIndex = 18;
             pictureBoxLine.TabStop = false;
@@ -106,9 +111,10 @@
             // 
             pictureBoxDie.BackColor = Color.FromArgb(15, 17, 24);
             pictureBoxDie.Image = (Image)resources.GetObject("pictureBoxDie.Image");
-            pictureBoxDie.Location = new Point(108, 118);
+            pictureBoxDie.Location = new Point(216, 236);
+            pictureBoxDie.Margin = new Padding(6, 6, 6, 6);
             pictureBoxDie.Name = "pictureBoxDie";
-            pictureBoxDie.Size = new Size(427, 50);
+            pictureBoxDie.Size = new Size(854, 100);
             pictureBoxDie.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxDie.TabIndex = 17;
             pictureBoxDie.TabStop = false;
@@ -117,27 +123,28 @@
             // 
             pictureBoxSun.BackColor = Color.Transparent;
             pictureBoxSun.Image = (Image)resources.GetObject("pictureBoxSun.Image");
-            pictureBoxSun.Location = new Point(30, 12);
+            pictureBoxSun.Location = new Point(60, 24);
+            pictureBoxSun.Margin = new Padding(6, 6, 6, 6);
             pictureBoxSun.Name = "pictureBoxSun";
-            pictureBoxSun.Size = new Size(28, 35);
+            pictureBoxSun.Size = new Size(56, 70);
             pictureBoxSun.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxSun.TabIndex = 18;
             pictureBoxSun.TabStop = false;
             // 
             // voteResult
             // 
-            AutoScaleDimensions = new SizeF(96F, 96F);
-            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoScaleMode = AutoScaleMode.None;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(640, 360);
+            ClientSize = new Size(1280, 720);
             Controls.Add(pictureBoxSun);
             Controls.Add(labelDie);
             Controls.Add(label4);
             Controls.Add(pictureBoxDie);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(6, 6, 6, 6);
             Name = "voteResult";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "voteResult";

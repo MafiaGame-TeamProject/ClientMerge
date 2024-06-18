@@ -73,15 +73,14 @@
             // 
             // OtherChat
             // 
-            AutoScaleDimensions = new SizeF(14F, 32F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.Transparent;
             Controls.Add(userLbl);
             Controls.Add(pictureBox1);
             Controls.Add(otherLbl);
             Margin = new Padding(6);
             Name = "OtherChat";
-            Size = new Size(1184, 80);
+            Size = new Size(1175, 80);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\2024\\3-1\\AS\\newAPP\\ClientMerge\\Client\\WinFormClient.csproj": {}
+    "D:\\2024\\3-1\\AS\\teamproject\\ClientMerge\\Client\\WinFormClient.csproj": {}
   },
   "projects": {
-    "D:\\2024\\3-1\\AS\\newAPP\\ClientMerge\\Client\\WinFormClient.csproj": {
+    "D:\\2024\\3-1\\AS\\teamproject\\ClientMerge\\Client\\WinFormClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\2024\\3-1\\AS\\newAPP\\ClientMerge\\Client\\WinFormClient.csproj",
+        "projectUniqueName": "D:\\2024\\3-1\\AS\\teamproject\\ClientMerge\\Client\\WinFormClient.csproj",
         "projectName": "WinFormClient",
-        "projectPath": "D:\\2024\\3-1\\AS\\newAPP\\ClientMerge\\Client\\WinFormClient.csproj",
+        "projectPath": "D:\\2024\\3-1\\AS\\teamproject\\ClientMerge\\Client\\WinFormClient.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\2024\\3-1\\AS\\newAPP\\ClientMerge\\Client\\obj\\",
+        "outputPath": "D:\\2024\\3-1\\AS\\teamproject\\ClientMerge\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "D:\\2024\\3-1\\AS\\newAPP\\library\\ChatLib.csproj": {
-                "projectPath": "D:\\2024\\3-1\\AS\\newAPP\\library\\ChatLib.csproj"
+              "D:\\2024\\3-1\\AS\\teamproject\\library\\ChatLib.csproj": {
+                "projectPath": "D:\\2024\\3-1\\AS\\teamproject\\library\\ChatLib.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "D:\\2024\\3-1\\AS\\newAPP\\library\\ChatLib.csproj": {
+    "D:\\2024\\3-1\\AS\\teamproject\\library\\ChatLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\2024\\3-1\\AS\\newAPP\\library\\ChatLib.csproj",
+        "projectUniqueName": "D:\\2024\\3-1\\AS\\teamproject\\library\\ChatLib.csproj",
         "projectName": "ChatLib",
-        "projectPath": "D:\\2024\\3-1\\AS\\newAPP\\library\\ChatLib.csproj",
+        "projectPath": "D:\\2024\\3-1\\AS\\teamproject\\library\\ChatLib.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\2024\\3-1\\AS\\newAPP\\library\\obj\\",
+        "outputPath": "D:\\2024\\3-1\\AS\\teamproject\\library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
