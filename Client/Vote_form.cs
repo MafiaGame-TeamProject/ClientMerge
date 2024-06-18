@@ -18,7 +18,7 @@ namespace Vote
         private List<Label> labels;
         private PictureBox pictureBoxButton;
 
-        private int remainingTime = 10; // 1분
+        private int remainingTime = 20; // 1분
 
 
         List<string> _userList = new List<string>();
@@ -30,6 +30,7 @@ namespace Vote
 
         private string msg = "";
         
+        private bool isSend = false;
 
         public static class ImageManager
         {
@@ -175,6 +176,11 @@ namespace Vote
 
             // 버튼 클릭 시 수행
             msg = labels[checkedIndex].Text;
+            _clientHandler.Send(new ChatHub
+            {
+                Message = "VOTED:" + msg,
+            });
+            isSend = true;
         }
 
         private void UpdateButtonState()
@@ -201,11 +207,17 @@ namespace Vote
                 timer1.Stop();
                 //서버에 전송
                 if (msg == "")
+                {
                     msg = labels[checkedIndex].Text;
+                }
+                if (!isSend)
+                {
                 _clientHandler.Send(new ChatHub
                 {
                     Message = "VOTED:" + msg,
                 });
+                }
+                
             }
         }
 

@@ -101,6 +101,7 @@ namespace SuggestedWord
             SuggestedWordType_lbl = new System.Windows.Forms.Label
             {
                 Text = "주제 : " + _words[1],
+                Parent = CardPB,
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.FromArgb(255, 209, 154),
@@ -111,6 +112,7 @@ namespace SuggestedWord
             SugestedWord_lbl = new System.Windows.Forms.Label
             {
                 Text = _words[4],
+                Parent = CardPB,
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.Black,
@@ -123,6 +125,7 @@ namespace SuggestedWord
             Explanation_lbl = new System.Windows.Forms.Label
             {
                 Text = "당신의 제시어는 " + _words[4] + "입니다.",
+                Parent = CardPB,
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.FromArgb(255, 209, 154),
@@ -134,6 +137,7 @@ namespace SuggestedWord
             Ment_lbl = new System.Windows.Forms.Label
             {
                 Text = "라이어가 누구인지 추리하세요!",
+                Parent = CardPB,
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.White,
@@ -161,10 +165,10 @@ namespace SuggestedWord
 
             for (int i = 0; i < CardLable.Length; i++)
             {
-                this.Controls.Add(CardLable[i]); // CardPB 대신 Form에 추가
+                this.CardPB.Controls.Add(CardLable[i]); // CardPB 대신 Form에 추가
                 CardLable[i].Visible = false;
             }
-            this.Controls.Add(SuggestPB); // CardPB 대신 Form에 추가
+            this.CardPB.Controls.Add(SuggestPB); // CardPB 대신 Form에 추가
             SuggestPB.Visible = false;
 
             timer = new System.Windows.Forms.Timer();

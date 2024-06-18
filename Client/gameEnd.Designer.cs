@@ -55,12 +55,12 @@
             labelUser.AutoSize = true;
             labelUser.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelUser.ForeColor = Color.White;
-            labelUser.Location = new Point(56, 240);
+            labelUser.Location = new Point(653, 235);
             labelUser.Margin = new Padding(6, 0, 6, 0);
             labelUser.Name = "labelUser";
-            labelUser.Size = new Size(1161, 50);
+            labelUser.Size = new Size(0, 50);
             labelUser.TabIndex = 1;
-            labelUser.Text = "라이어: User1 / 시민: User2, User3, User4";
+            labelUser.Click += labelUser_Click;
             // 
             // labelWord
             // 
@@ -79,7 +79,7 @@
             kryptonButton4.CornerRoundingRadius = 5F;
             kryptonButton4.Enabled = false;
             kryptonButton4.Location = new Point(420, 536);
-            kryptonButton4.Margin = new Padding(6, 6, 6, 6);
+            kryptonButton4.Margin = new Padding(6);
             kryptonButton4.Name = "kryptonButton4";
             kryptonButton4.Size = new Size(440, 110);
             kryptonButton4.StateCommon.Back.Color1 = Color.FromArgb(10, 10, 14);
@@ -99,7 +99,7 @@
             kryptonButton6.CornerRoundingRadius = 5F;
             kryptonButton6.Enabled = false;
             kryptonButton6.Location = new Point(420, 404);
-            kryptonButton6.Margin = new Padding(6, 6, 6, 6);
+            kryptonButton6.Margin = new Padding(6);
             kryptonButton6.Name = "kryptonButton6";
             kryptonButton6.Size = new Size(440, 110);
             kryptonButton6.StateCommon.Back.Color1 = Color.FromArgb(10, 10, 14);
@@ -118,7 +118,7 @@
             // 
             btnLobby.ButtonStyle = Krypton.Toolkit.ButtonStyle.Alternate;
             btnLobby.Location = new Point(432, 412);
-            btnLobby.Margin = new Padding(6, 6, 6, 6);
+            btnLobby.Margin = new Padding(6);
             btnLobby.Name = "btnLobby";
             btnLobby.OverrideDefault.Back.Color1 = Color.FromArgb(10, 10, 14);
             btnLobby.OverrideDefault.Back.Color2 = Color.FromArgb(10, 10, 14);
@@ -149,7 +149,7 @@
             // 
             btnExit.ButtonStyle = Krypton.Toolkit.ButtonStyle.Alternate;
             btnExit.Location = new Point(432, 546);
-            btnExit.Margin = new Padding(6, 6, 6, 6);
+            btnExit.Margin = new Padding(6);
             btnExit.Name = "btnExit";
             btnExit.OverrideDefault.Back.Color1 = Color.FromArgb(10, 10, 14);
             btnExit.OverrideDefault.Back.Color2 = Color.FromArgb(10, 10, 14);
@@ -192,7 +192,7 @@
             Controls.Add(kryptonButton4);
             ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "gameEnd";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
