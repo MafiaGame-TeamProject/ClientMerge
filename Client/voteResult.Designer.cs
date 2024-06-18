@@ -38,6 +38,7 @@
             pictureBoxLine = new PictureBox();
             pictureBoxDie = new PictureBox();
             pictureBoxSun = new PictureBox();
+            lblMafia = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLine).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxDie).BeginInit();
@@ -73,10 +74,11 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(15, 17, 24);
+            panel1.Controls.Add(lblMafia);
             panel1.Controls.Add(labelJob);
             panel1.Controls.Add(pictureBoxLine);
             panel1.Location = new Point(216, 316);
-            panel1.Margin = new Padding(6, 6, 6, 6);
+            panel1.Margin = new Padding(6);
             panel1.Name = "panel1";
             panel1.Size = new Size(854, 224);
             panel1.TabIndex = 16;
@@ -87,12 +89,12 @@
             labelJob.BackColor = Color.Transparent;
             labelJob.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelJob.ForeColor = Color.White;
-            labelJob.Location = new Point(294, 44);
+            labelJob.Location = new Point(142, 63);
             labelJob.Margin = new Padding(6, 0, 6, 0);
             labelJob.Name = "labelJob";
-            labelJob.Size = new Size(284, 100);
+            labelJob.Size = new Size(563, 50);
             labelJob.TabIndex = 18;
-            labelJob.Text = "User1님은\r\n시민입니다.";
+            labelJob.Text = "User1님은 시민입니다.";
             labelJob.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBoxLine
@@ -100,7 +102,7 @@
             pictureBoxLine.BackColor = Color.FromArgb(15, 17, 24);
             pictureBoxLine.Image = (Image)resources.GetObject("pictureBoxLine.Image");
             pictureBoxLine.Location = new Point(0, 150);
-            pictureBoxLine.Margin = new Padding(6, 6, 6, 6);
+            pictureBoxLine.Margin = new Padding(6);
             pictureBoxLine.Name = "pictureBoxLine";
             pictureBoxLine.Size = new Size(854, 74);
             pictureBoxLine.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -112,7 +114,7 @@
             pictureBoxDie.BackColor = Color.FromArgb(15, 17, 24);
             pictureBoxDie.Image = (Image)resources.GetObject("pictureBoxDie.Image");
             pictureBoxDie.Location = new Point(216, 236);
-            pictureBoxDie.Margin = new Padding(6, 6, 6, 6);
+            pictureBoxDie.Margin = new Padding(6);
             pictureBoxDie.Name = "pictureBoxDie";
             pictureBoxDie.Size = new Size(854, 100);
             pictureBoxDie.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -124,12 +126,22 @@
             pictureBoxSun.BackColor = Color.Transparent;
             pictureBoxSun.Image = (Image)resources.GetObject("pictureBoxSun.Image");
             pictureBoxSun.Location = new Point(60, 24);
-            pictureBoxSun.Margin = new Padding(6, 6, 6, 6);
+            pictureBoxSun.Margin = new Padding(6);
             pictureBoxSun.Name = "pictureBoxSun";
             pictureBoxSun.Size = new Size(56, 70);
             pictureBoxSun.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxSun.TabIndex = 18;
             pictureBoxSun.TabStop = false;
+            // 
+            // lblMafia
+            // 
+            lblMafia.AutoSize = true;
+            lblMafia.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMafia.ForeColor = Color.White;
+            lblMafia.Location = new Point(90, 131);
+            lblMafia.Name = "lblMafia";
+            lblMafia.Size = new Size(0, 50);
+            lblMafia.TabIndex = 19;
             // 
             // voteResult
             // 
@@ -144,10 +156,10 @@
             Controls.Add(pictureBoxDie);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "voteResult";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "voteResult";
+            Text = "MafiaGame";
             Load += voteResult_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -167,6 +179,7 @@
         private System.Windows.Forms.PictureBox pictureBoxLine;
         private System.Windows.Forms.Label labelJob;
         private System.Windows.Forms.PictureBox pictureBoxSun;
+        private Label lblMafia;
     }
 }
 

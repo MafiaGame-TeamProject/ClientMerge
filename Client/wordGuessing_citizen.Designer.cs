@@ -66,7 +66,7 @@
             pictureBoxSun.BackColor = Color.Transparent;
             pictureBoxSun.Image = (Image)resources.GetObject("pictureBoxSun.Image");
             pictureBoxSun.Location = new Point(60, 24);
-            pictureBoxSun.Margin = new Padding(6, 6, 6, 6);
+            pictureBoxSun.Margin = new Padding(6);
             pictureBoxSun.Name = "pictureBoxSun";
             pictureBoxSun.Size = new Size(56, 70);
             pictureBoxSun.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -79,7 +79,7 @@
             labelGuide.BackColor = Color.FromArgb(15, 17, 24);
             labelGuide.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelGuide.ForeColor = Color.White;
-            labelGuide.Location = new Point(342, 260);
+            labelGuide.Location = new Point(226, 234);
             labelGuide.Margin = new Padding(6, 0, 6, 0);
             labelGuide.Name = "labelGuide";
             labelGuide.Size = new Size(643, 50);
@@ -91,7 +91,7 @@
             pictureBoxDie.BackColor = Color.FromArgb(15, 17, 24);
             pictureBoxDie.Image = (Image)resources.GetObject("pictureBoxDie.Image");
             pictureBoxDie.Location = new Point(216, 222);
-            pictureBoxDie.Margin = new Padding(6, 6, 6, 6);
+            pictureBoxDie.Margin = new Padding(6);
             pictureBoxDie.Name = "pictureBoxDie";
             pictureBoxDie.Size = new Size(854, 114);
             pictureBoxDie.TabIndex = 26;
@@ -103,7 +103,7 @@
             panel1.Controls.Add(labelWord);
             panel1.Controls.Add(pictureBoxLine);
             panel1.Location = new Point(216, 316);
-            panel1.Margin = new Padding(6, 6, 6, 6);
+            panel1.Margin = new Padding(6);
             panel1.Name = "panel1";
             panel1.Size = new Size(854, 224);
             panel1.TabIndex = 25;
@@ -114,7 +114,7 @@
             labelWord.BackColor = Color.Transparent;
             labelWord.Font = new Font("휴먼둥근헤드라인", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
             labelWord.ForeColor = Color.White;
-            labelWord.Location = new Point(208, 66);
+            labelWord.Location = new Point(230, 48);
             labelWord.Margin = new Padding(6, 0, 6, 0);
             labelWord.Name = "labelWord";
             labelWord.Size = new Size(433, 78);
@@ -126,7 +126,7 @@
             pictureBoxLine.BackColor = Color.FromArgb(15, 17, 24);
             pictureBoxLine.Image = (Image)resources.GetObject("pictureBoxLine.Image");
             pictureBoxLine.Location = new Point(0, 150);
-            pictureBoxLine.Margin = new Padding(6, 6, 6, 6);
+            pictureBoxLine.Margin = new Padding(6);
             pictureBoxLine.Name = "pictureBoxLine";
             pictureBoxLine.Size = new Size(854, 74);
             pictureBoxLine.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -146,10 +146,10 @@
             Controls.Add(pictureBoxSun);
             Controls.Add(labelScreen);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "wordGuessing_citizen";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "citizen";
+            Text = "MafiaGame";
             Load += wordGuessing_citizen_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxSun).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxDie).EndInit();

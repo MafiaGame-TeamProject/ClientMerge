@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "23otCjAed6qFj1vuaEmdlJUvh7yp1LGy189FKQleSdUM1sCMY059W3ycNNyge//Ory8m98wu9PwLzPnDkQEGCw==",
+  "dgSpecHash": "2wM94Hudrvhb8NRpkBZUWca9hRGsLgIse1dDFGd5F/TWua+SWXuG5O23HnboqGY73zqMrSq0hw69ioAAITvJVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\YuJinLee\\Desktop\\LiarMerge\\ClientMerge\\Client\\WinFormClient.csproj",
+  "projectFilePath": "D:\\2024\\3-1\\AS\\newAPP\\ClientMerge\\Client\\WinFormClient.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\YuJinLee\\.nuget\\packages\\krypton.toolkit\\80.24.3.64\\krypton.toolkit.80.24.3.64.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\krypton.toolkit\\80.24.3.64\\krypton.toolkit.80.24.3.64.nupkg.sha512"
   ],
   "logs": []
 }

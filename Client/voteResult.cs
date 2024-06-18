@@ -10,10 +10,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Krypton.Toolkit;
 
 namespace WinFormClient
 {
-    public partial class voteResult : Form
+    public partial class voteResult : KryptonForm
     {
         ChatClient _client;
         ClientHandler _clientHandler;
@@ -68,13 +69,14 @@ namespace WinFormClient
             if (_votedUser != _liarName) // 시민 처형
             {
                 labelDie.Text = _votedUser + "님이 처형당했습니다";
-                labelJob.Text = _votedUser + "님은 \n시민입니다.";
+                labelJob.Text = _votedUser + "님은 시민입니다.";
                 _whoWin = false;
             }
             else // 라이어 처형
             {
                 labelDie.Text = _votedUser + "님이 처형당했습니다";
-                labelJob.Text = _votedUser + "님은 라이어입니다.\n" + "라이어는 제시어를 맞춰주세요.";
+                labelJob.Text = _votedUser + "님은 라이어입니다.";
+                lblMafia.Text=    "라이어는 제시어를 맞춰주세요.";
                 _whoWin = true;
             }
         }

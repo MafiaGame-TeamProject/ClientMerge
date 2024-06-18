@@ -29,7 +29,7 @@ namespace Vote
         private int checkedIndex = 1;
 
         private string msg = "";
-        
+
         private bool isSend = false;
 
         public static class ImageManager
@@ -180,7 +180,9 @@ namespace Vote
             {
                 Message = "VOTED:" + msg,
             });
+
             isSend = true;
+            pictureBoxButton.Enabled = false;
         }
 
         private void UpdateButtonState()
@@ -212,15 +214,20 @@ namespace Vote
                 }
                 if (!isSend)
                 {
-                _clientHandler.Send(new ChatHub
-                {
-                    Message = "VOTED:" + msg,
-                });
+                    _clientHandler.Send(new ChatHub
+                    {
+                        Message = "VOTED:" + msg,
+                    });
                 }
-                
+
             }
         }
 
+        private void Vote_form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _client.Close();
+            this.Close();
+        }
     }
 
     public class CustomCheckBox

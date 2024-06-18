@@ -100,6 +100,7 @@
             Name = "Vote_form";
             StartPosition = FormStartPosition.CenterParent;
             Text = "MafiaGame";
+            FormClosing += Vote_form_FormClosing;
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();

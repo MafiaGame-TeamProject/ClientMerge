@@ -9,10 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Krypton.Toolkit;
 
 namespace WinFormClient
 {
-    public partial class gameEnd : Form
+    public partial class gameEnd : KryptonForm
     {
         bool _whoWin; //true: 시민 승리, false: 라이어 승리
         string _liarName;
@@ -42,6 +43,7 @@ namespace WinFormClient
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+            _client.Close();
         }
 
         private void gameEnd_Load(object sender, EventArgs e)

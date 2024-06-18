@@ -86,7 +86,7 @@
             pictureBoxTime.BackColor = Color.Transparent;
             pictureBoxTime.Image = (Image)resources.GetObject("pictureBoxTime.Image");
             pictureBoxTime.Location = new Point(996, 34);
-            pictureBoxTime.Margin = new Padding(6, 6, 6, 6);
+            pictureBoxTime.Margin = new Padding(6);
             pictureBoxTime.Name = "pictureBoxTime";
             pictureBoxTime.Size = new Size(52, 54);
             pictureBoxTime.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -98,7 +98,7 @@
             pictureBoxSun.BackColor = Color.Transparent;
             pictureBoxSun.Image = (Image)resources.GetObject("pictureBoxSun.Image");
             pictureBoxSun.Location = new Point(60, 24);
-            pictureBoxSun.Margin = new Padding(6, 6, 6, 6);
+            pictureBoxSun.Margin = new Padding(6);
             pictureBoxSun.Name = "pictureBoxSun";
             pictureBoxSun.Size = new Size(56, 70);
             pictureBoxSun.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -109,7 +109,7 @@
             // 
             btnTopic.Enabled = false;
             btnTopic.Location = new Point(464, 232);
-            btnTopic.Margin = new Padding(6, 6, 6, 6);
+            btnTopic.Margin = new Padding(6);
             btnTopic.Name = "btnTopic";
             btnTopic.OverrideDefault.Back.Color1 = Color.FromArgb(31, 28, 32);
             btnTopic.OverrideDefault.Back.Color2 = Color.FromArgb(31, 28, 32);
@@ -133,7 +133,7 @@
             // 
             panelLine.BackColor = Color.FromArgb(252, 238, 182);
             panelLine.Location = new Point(618, 244);
-            panelLine.Margin = new Padding(6, 6, 6, 6);
+            panelLine.Margin = new Padding(6);
             panelLine.Name = "panelLine";
             panelLine.Size = new Size(2, 60);
             panelLine.TabIndex = 26;
@@ -167,7 +167,7 @@
             // btnSend
             // 
             btnSend.Location = new Point(780, 74);
-            btnSend.Margin = new Padding(6, 6, 6, 6);
+            btnSend.Margin = new Padding(6);
             btnSend.Name = "btnSend";
             btnSend.OverrideDefault.Back.Color1 = Color.FromArgb(31, 28, 32);
             btnSend.OverrideDefault.Back.Color2 = Color.FromArgb(31, 28, 32);
@@ -197,7 +197,7 @@
             panelBackground.Controls.Add(txtBox);
             panelBackground.Controls.Add(txtBackground);
             panelBackground.Location = new Point(152, 270);
-            panelBackground.Margin = new Padding(6, 6, 6, 6);
+            panelBackground.Margin = new Padding(6);
             panelBackground.Name = "panelBackground";
             panelBackground.Size = new Size(1028, 216);
             panelBackground.StateCommon.Color1 = Color.FromArgb(24, 21, 24);
@@ -208,7 +208,7 @@
             Circle.BackColor = Color.Transparent;
             Circle.Image = (Image)resources.GetObject("Circle.Image");
             Circle.Location = new Point(976, 100);
-            Circle.Margin = new Padding(6, 6, 6, 6);
+            Circle.Margin = new Padding(6);
             Circle.Name = "Circle";
             Circle.Size = new Size(20, 20);
             Circle.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -218,7 +218,7 @@
             // txtBox
             // 
             txtBox.Location = new Point(32, 70);
-            txtBox.Margin = new Padding(6, 6, 6, 6);
+            txtBox.Margin = new Padding(6);
             txtBox.Name = "txtBox";
             txtBox.Size = new Size(732, 69);
             txtBox.StateCommon.Back.Color1 = Color.FromArgb(31, 28, 32);
@@ -234,7 +234,7 @@
             // 
             txtBackground.Enabled = false;
             txtBackground.Location = new Point(10, 34);
-            txtBackground.Margin = new Padding(6, 6, 6, 6);
+            txtBackground.Margin = new Padding(6);
             txtBackground.Name = "txtBackground";
             txtBackground.Size = new Size(1004, 149);
             txtBackground.StateCommon.Back.Color1 = Color.FromArgb(24, 21, 24);
@@ -263,10 +263,10 @@
             Controls.Add(labelScreen);
             Controls.Add(panelBackground);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "wordGuessing";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "liar";
+            Text = "MafiaGame";
             Load += wordGuessing_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxTime).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSun).EndInit();

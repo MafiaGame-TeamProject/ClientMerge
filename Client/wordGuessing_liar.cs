@@ -11,10 +11,11 @@ using System.Text;
 using System.Threading.Tasks;
 //using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using Krypton.Toolkit;
 
 namespace WinFormClient
 {
-    public partial class wordGuessing : Form
+    public partial class wordGuessing : KryptonForm
     {
         private int remainingTime = 60; // 1분
         ChatClient _client;

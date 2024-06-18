@@ -42,10 +42,10 @@
             lableWinner.AutoSize = true;
             lableWinner.Font = new Font("휴먼둥근헤드라인", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
             lableWinner.ForeColor = Color.White;
-            lableWinner.Location = new Point(402, 60);
+            lableWinner.Location = new Point(408, 58);
             lableWinner.Margin = new Padding(6, 0, 6, 0);
             lableWinner.Name = "lableWinner";
-            lableWinner.Size = new Size(239, 72);
+            lableWinner.Size = new Size(480, 146);
             lableWinner.TabIndex = 0;
             lableWinner.Text = "시민팀이 \r\n승리했습니다!";
             lableWinner.TextAlign = ContentAlignment.MiddleCenter;
@@ -55,11 +55,12 @@
             labelUser.AutoSize = true;
             labelUser.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelUser.ForeColor = Color.White;
-            labelUser.Location = new Point(653, 235);
+            labelUser.Location = new Point(66, 230);
             labelUser.Margin = new Padding(6, 0, 6, 0);
             labelUser.Name = "labelUser";
-            labelUser.Size = new Size(0, 25);
+            labelUser.Size = new Size(1161, 50);
             labelUser.TabIndex = 1;
+            labelUser.Text = "라이어: User1 / 시민: User2, User3, User4";
             // 
             // labelWord
             // 
@@ -69,7 +70,7 @@
             labelWord.Location = new Point(490, 312);
             labelWord.Margin = new Padding(6, 0, 6, 0);
             labelWord.Name = "labelWord";
-            labelWord.Size = new Size(153, 25);
+            labelWord.Size = new Size(303, 50);
             labelWord.TabIndex = 2;
             labelWord.Text = "제시어: 의사";
             // 
@@ -194,7 +195,7 @@
             Margin = new Padding(6);
             Name = "gameEnd";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "MafiaGame";
             Load += gameEnd_Load;
             ResumeLayout(false);
             PerformLayout();

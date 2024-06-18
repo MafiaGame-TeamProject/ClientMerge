@@ -9,10 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Krypton.Toolkit;
 
 namespace WinFormClient
 {
-    public partial class wordGuessing_citizen : Form
+    public partial class wordGuessing_citizen : KryptonForm
     {
         ChatClient _client;
         ClientHandler _clientHandler;

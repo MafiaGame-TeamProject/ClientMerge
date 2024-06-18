@@ -58,11 +58,8 @@ namespace SuggestedWord
                 CardFront = Image.FromFile(Path.Combine(resourcesPath, "Card_front.png"));
                 CardBack = Image.FromFile(Path.Combine(resourcesPath, "Card_back.png"));
                 SuggestedPicture = Image.FromFile(Path.Combine(resourcesPath, "fontisto_doctor.png"));
-
-
             }
         }
-
 
         public suggestWord_form(ChatClient client, ClientHandler handler, string UserName, List<string> words, ChattingForm chattingForm)
         {
@@ -71,10 +68,6 @@ namespace SuggestedWord
             _clientHandler = handler;
             _userName = UserName;
             _words = words;
-            // assignedWord : 내가 할당 받은 제시어 [4]
-            // word1 : 라이어 제시어 [2]
-            // word2 : 시민 제시어 [3]
-            // liarName : 라이어 이름 [5]
             _chattingForm = chattingForm;
 
             InitializeCardFlipComponents();
@@ -105,7 +98,7 @@ namespace SuggestedWord
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.FromArgb(255, 209, 154),
-                Location = new Point(570, 113),
+                Location = new Point(50, 10),
                 Font = new Font("휴먼둥근헤드라인", 11)
             };
 
@@ -117,9 +110,8 @@ namespace SuggestedWord
                 BackColor = Color.Transparent,
                 ForeColor = Color.Black,
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(594, 494),
+                Location = new Point(105, 190 * 2),
                 Font = new Font("휴먼둥근헤드라인", 11)
-
             };
 
             Explanation_lbl = new System.Windows.Forms.Label
@@ -129,7 +121,7 @@ namespace SuggestedWord
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.FromArgb(255, 209, 154),
-                Location = new Point(490, 548),
+                Location = new Point(25, 215 * 2),
                 Font = new Font("휴먼둥근헤드라인", 7),
                 TextAlign = ContentAlignment.MiddleCenter,
             };
@@ -141,7 +133,7 @@ namespace SuggestedWord
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.White,
-                Location = new Point(522, 575),
+                Location = new Point(45, 230 * 2),
                 Font = new Font("휴먼둥근헤드라인", 6),
                 TextAlign = ContentAlignment.MiddleCenter,
             };
@@ -160,15 +152,15 @@ namespace SuggestedWord
                 Height = sgtHeight,
                 Image = ImageManager.SuggestedPicture,
                 SizeMode = PictureBoxSizeMode.StretchImage,
-                Location = new Point(590, 277)
+                Location = new Point((cardWidth - sgtWidth) / 2, (cardHeight - sgtHeight) / 2) // 중앙에 위치
             };
 
             for (int i = 0; i < CardLable.Length; i++)
             {
-                this.CardPB.Controls.Add(CardLable[i]); // CardPB 대신 Form에 추가
+                CardPB.Controls.Add(CardLable[i]); // CardPB에 라벨 추가
                 CardLable[i].Visible = false;
             }
-            this.CardPB.Controls.Add(SuggestPB); // CardPB 대신 Form에 추가
+            CardPB.Controls.Add(SuggestPB); // CardPB에 이미지 추가
             SuggestPB.Visible = false;
 
             timer = new System.Windows.Forms.Timer();
@@ -251,6 +243,7 @@ namespace SuggestedWord
         private void suggestWord_form_FormClosed(object sender, FormClosedEventArgs e)
         {
             _client.Close();
+            this.Close();
         }
 
         private void globalTimer_Tick(object sender, EventArgs e)
