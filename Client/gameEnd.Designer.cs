@@ -45,7 +45,7 @@
             lableWinner.Location = new Point(402, 60);
             lableWinner.Margin = new Padding(6, 0, 6, 0);
             lableWinner.Name = "lableWinner";
-            lableWinner.Size = new Size(480, 146);
+            lableWinner.Size = new Size(239, 72);
             lableWinner.TabIndex = 0;
             lableWinner.Text = "시민팀이 \r\n승리했습니다!";
             lableWinner.TextAlign = ContentAlignment.MiddleCenter;
@@ -58,9 +58,8 @@
             labelUser.Location = new Point(653, 235);
             labelUser.Margin = new Padding(6, 0, 6, 0);
             labelUser.Name = "labelUser";
-            labelUser.Size = new Size(0, 50);
+            labelUser.Size = new Size(0, 25);
             labelUser.TabIndex = 1;
-            labelUser.Click += labelUser_Click;
             // 
             // labelWord
             // 
@@ -70,7 +69,7 @@
             labelWord.Location = new Point(490, 312);
             labelWord.Margin = new Padding(6, 0, 6, 0);
             labelWord.Name = "labelWord";
-            labelWord.Size = new Size(303, 50);
+            labelWord.Size = new Size(153, 25);
             labelWord.TabIndex = 2;
             labelWord.Text = "제시어: 의사";
             // 

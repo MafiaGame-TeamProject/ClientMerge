@@ -73,14 +73,14 @@ namespace WinFormClient
                 if (_liarAnswer == _realWord) // 라이어 우승
                  {
                     _whoWin = false;
-                    var gameEndForm = new gameEnd(_whoWin, _liarName, _citizenName, _realWord);
+                    var gameEndForm = new gameEnd(_client, _whoWin, _liarName, _citizenName, _realWord);
                     gameEndForm.Show();
                     this.Hide();
                 }
                 else // 시민 우승
                  {
                     _whoWin = true;
-                    var gameEndForm = new gameEnd(_whoWin, _liarName, _citizenName, _realWord);
+                    var gameEndForm = new gameEnd(_client, _whoWin, _liarName, _citizenName, _realWord);
                     gameEndForm.Show();
                     this.Hide();
                 } 

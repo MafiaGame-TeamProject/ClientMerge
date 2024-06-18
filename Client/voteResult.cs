@@ -90,7 +90,7 @@ namespace WinFormClient
 
                 if (!_whoWin)
                 { // 시민 처형
-                    var gameEndForm = new gameEnd(_whoWin, _liarName, _citizenName, _realWord);
+                    var gameEndForm = new gameEnd(_client, _whoWin, _liarName, _citizenName, _realWord);
                     gameEndForm.Show();
                     this.Hide();
                 }
