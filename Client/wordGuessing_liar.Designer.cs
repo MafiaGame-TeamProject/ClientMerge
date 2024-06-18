@@ -206,7 +206,7 @@
             // 
             // txtBox
             // 
-            txtBox.Location = new Point(19, 35);
+            txtBox.Location = new Point(16, 35);
             txtBox.Name = "txtBox";
             txtBox.Size = new Size(366, 41);
             txtBox.StateCommon.Back.Color1 = Color.FromArgb(31, 28, 32);
@@ -221,7 +221,7 @@
             // txtBackground
             // 
             txtBackground.Enabled = false;
-            txtBackground.Location = new Point(10, 17);
+            txtBackground.Location = new Point(5, 17);
             txtBackground.Name = "txtBackground";
             txtBackground.Size = new Size(502, 81);
             txtBackground.StateCommon.Back.Color1 = Color.FromArgb(24, 21, 24);

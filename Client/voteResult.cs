@@ -92,15 +92,15 @@ namespace WinFormClient
                     gameEndForm.Show();
                     this.Hide();
                 }
-                else
-                { // 라이어 처형
+                else // 라이어 처형
+                { 
                     // 라이어만 제시어 맞추기(라이어 화면)으로 전환
                     if(_userName == _liarName)
                     {
                         //wordGuessing(ChatClient client, ClientHandler handler, string userName)
-                        //var wordGuessingLiarForm = new wordGuessing_liar(_client, _clientHandler, _userName);
-                        //wordGuessingLiarForm.Show();
-                        //this.Hide();
+                        var wordGuessingLiarForm = new wordGuessing(_client, _clientHandler, _userName);
+                        wordGuessingLiarForm.Show();
+                        this.Hide();
                     }
                 }
             }

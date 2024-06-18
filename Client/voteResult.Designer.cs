@@ -89,6 +89,7 @@
             labelJob.Size = new Size(143, 50);
             labelJob.TabIndex = 18;
             labelJob.Text = "User1님은\r\n시민입니다.";
+            labelJob.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBoxLine
             // 

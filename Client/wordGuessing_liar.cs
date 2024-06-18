@@ -47,15 +47,6 @@ namespace WinFormClient
             if (remainingTime <= 0)
             {
                 timer1.Stop();
-
-                string msg = txtBox.Text;
-                if (!string.IsNullOrWhiteSpace(msg))
-                {
-                    _clientHandler.Send(new ChatHub
-                    {
-                        Message = "VOTED:" + msg,
-                    });
-                }
             }
         }
 
@@ -66,9 +57,10 @@ namespace WinFormClient
             {
                 _clientHandler.Send(new ChatHub
                 {
-                    Message = "VOTED:" + msg,
+                    Message = "ANSWER:" + msg,
                 });
             }
+            this.Hide();
         }
 
         private void wordGuessing_Load(object sender, EventArgs e)

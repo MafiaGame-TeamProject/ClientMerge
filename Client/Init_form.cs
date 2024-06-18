@@ -19,7 +19,7 @@ namespace WinFormClient
         private waitingRoom_form waitingRoomForm;
         private ChattingForm chattingForm;
         private Vote_form voteForm;
-
+        private voteResult voteResultForm;
         private bool voteFormShown = false;
 
         // 수정한 부분
@@ -143,7 +143,7 @@ namespace WinFormClient
 
                 BeginInvoke((MethodInvoker)delegate
                 {
-                    var voteResultForm = new voteResult(_client, _clientHandler, UserName, _words, _totalUsers, _votedUser);
+                    voteResultForm = new voteResult(_client, _clientHandler, UserName, _words, _totalUsers, _votedUser);
                     voteResultForm.Show();
                     voteForm.Hide();
                 });
@@ -155,6 +155,10 @@ namespace WinFormClient
             {
                 var answer = hub.Message.Substring("ANSWERWORD:".Length);
                 this._liarAnswer = answer;
+
+                var wordGuessingCitizenForm = new wordGuessing_citizen(_client, _clientHandler, UserName, _words, _totalUsers, _liarAnswer);
+                wordGuessingCitizenForm .Show();
+                voteResultForm.Hide();
             }
         }
 
