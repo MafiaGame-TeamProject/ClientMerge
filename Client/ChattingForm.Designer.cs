@@ -194,6 +194,7 @@
             StartPosition = FormStartPosition.CenterParent;
             Text = "MafiaGame";
             Load += ChattingForm_Load;
+            KeyDown += ChattingForm_KeyDown;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxTime).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSun).EndInit();

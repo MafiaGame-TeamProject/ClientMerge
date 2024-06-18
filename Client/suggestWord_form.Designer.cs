@@ -35,7 +35,7 @@
             // 
             // globalTimer
             // 
-            globalTimer.Interval = 30000;
+            globalTimer.Interval = 20000;
             globalTimer.Tick += globalTimer_Tick;
             // 
             // suggestWord_form

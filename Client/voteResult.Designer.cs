@@ -34,11 +34,11 @@
             label4 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             panel1 = new Panel();
+            lblMafia = new Label();
             labelJob = new Label();
             pictureBoxLine = new PictureBox();
             pictureBoxDie = new PictureBox();
             pictureBoxSun = new PictureBox();
-            lblMafia = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLine).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxDie).BeginInit();
@@ -82,6 +82,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(854, 224);
             panel1.TabIndex = 16;
+            // 
+            // lblMafia
+            // 
+            lblMafia.AutoSize = true;
+            lblMafia.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMafia.ForeColor = Color.White;
+            lblMafia.Location = new Point(90, 131);
+            lblMafia.Name = "lblMafia";
+            lblMafia.Size = new Size(0, 50);
+            lblMafia.TabIndex = 19;
             // 
             // labelJob
             // 
@@ -133,16 +143,6 @@
             pictureBoxSun.TabIndex = 18;
             pictureBoxSun.TabStop = false;
             // 
-            // lblMafia
-            // 
-            lblMafia.AutoSize = true;
-            lblMafia.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            lblMafia.ForeColor = Color.White;
-            lblMafia.Location = new Point(90, 131);
-            lblMafia.Name = "lblMafia";
-            lblMafia.Size = new Size(0, 50);
-            lblMafia.TabIndex = 19;
-            // 
             // voteResult
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -158,7 +158,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(6);
             Name = "voteResult";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "MafiaGame";
             Load += voteResult_Load;
             panel1.ResumeLayout(false);

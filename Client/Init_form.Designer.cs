@@ -36,7 +36,6 @@
             btnConnect = new Button();
             nudRoomId = new NumericUpDown();
             panel1 = new Panel();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)nudRoomId).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -47,7 +46,7 @@
             txtName.BorderStyle = BorderStyle.None;
             txtName.Font = new Font("굴림", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
             txtName.ForeColor = Color.Transparent;
-            txtName.Location = new Point(452, 206);
+            txtName.Location = new Point(452, 235);
             txtName.Margin = new Padding(6);
             txtName.Name = "txtName";
             txtName.PlaceholderText = "User Name";
@@ -61,7 +60,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("휴먼둥근헤드라인", 19.875F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(252, 206);
+            label2.Location = new Point(252, 235);
             label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
             label2.Size = new Size(194, 56);
@@ -75,7 +74,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("휴먼둥근헤드라인", 19.875F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(252, 90);
+            label4.Location = new Point(252, 114);
             label4.Margin = new Padding(6, 0, 6, 0);
             label4.Name = "label4";
             label4.Size = new Size(193, 56);
@@ -90,7 +89,7 @@
             btnStop.FlatStyle = FlatStyle.Flat;
             btnStop.Font = new Font("휴먼둥근헤드라인", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             btnStop.ForeColor = Color.FromArgb(226, 222, 211);
-            btnStop.Location = new Point(384, 510);
+            btnStop.Location = new Point(384, 485);
             btnStop.Margin = new Padding(6);
             btnStop.Name = "btnStop";
             btnStop.Size = new Size(320, 76);
@@ -105,7 +104,7 @@
             btnConnect.FlatStyle = FlatStyle.Flat;
             btnConnect.Font = new Font("휴먼둥근헤드라인", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             btnConnect.ForeColor = Color.FromArgb(226, 222, 211);
-            btnConnect.Location = new Point(384, 332);
+            btnConnect.Location = new Point(384, 372);
             btnConnect.Margin = new Padding(6);
             btnConnect.Name = "btnConnect";
             btnConnect.Size = new Size(320, 76);
@@ -118,7 +117,7 @@
             nudRoomId.BackColor = SystemColors.WindowText;
             nudRoomId.Font = new Font("굴림", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
             nudRoomId.ForeColor = Color.White;
-            nudRoomId.Location = new Point(452, 82);
+            nudRoomId.Location = new Point(452, 106);
             nudRoomId.Margin = new Padding(6);
             nudRoomId.Name = "nudRoomId";
             nudRoomId.Size = new Size(210, 68);
@@ -128,7 +127,6 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = Color.FromArgb(150, 0, 0, 0);
-            panel1.Controls.Add(button1);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(nudRoomId);
             panel1.Controls.Add(btnStop);
@@ -141,21 +139,6 @@
             panel1.Size = new Size(1088, 624);
             panel1.TabIndex = 37;
             // 
-            // button1
-            // 
-            button1.FlatAppearance.BorderColor = Color.FromArgb(226, 222, 211);
-            button1.FlatAppearance.BorderSize = 3;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("휴먼둥근헤드라인", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.FromArgb(226, 222, 211);
-            button1.Location = new Point(384, 422);
-            button1.Margin = new Padding(6);
-            button1.Name = "button1";
-            button1.Size = new Size(320, 76);
-            button1.TabIndex = 37;
-            button1.Text = "순위보기";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // Init_form
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -165,7 +148,7 @@
             ClientSize = new Size(1280, 720);
             Controls.Add(panel1);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(6);
             Name = "Init_form";
             Padding = new Padding(4, 64, 4, 4);
@@ -186,6 +169,5 @@
         private Button btnConnect;
         private NumericUpDown nudRoomId;
         private Panel panel1;
-        private Button button1;
     }
 }

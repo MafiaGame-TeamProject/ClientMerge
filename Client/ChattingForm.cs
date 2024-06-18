@@ -20,9 +20,7 @@ namespace WinFormClient
         List<string> _userList;
 
         private int m = 1;
-        private int s = 30;
-
-       
+        private int s = 0;
 
         public ChattingForm(ChatClient client, ClientHandler handler, string userName)
         {
@@ -30,11 +28,20 @@ namespace WinFormClient
             _client = client;
             _clientHandler = handler;
             _userName = userName;
-            
+
+            this.KeyPreview = true; // 폼의 KeyPreview 속성을 true로 설정
+
+            // txtInput 컨트롤의 KeyDown 이벤트 처리기 등록
+            txtInput.KeyDown += TxtInput_KeyDown;
         }
 
         // 메시지를 보내는 메서드
         private void sendBtn_Click(object sender, EventArgs e)
+        {
+            SendMessage();
+        }
+
+        private void SendMessage()
         {
             string msg = txtInput.Text;
             if (!string.IsNullOrWhiteSpace(msg))
@@ -45,9 +52,8 @@ namespace WinFormClient
                 _clientHandler.Send(new ChatHub
                 {
                     UserName = _userName,
-                    Message = "MsgSend:"+msg,
+                    Message = "MsgSend:" + msg,
                 });
-
             }
         }
 
@@ -55,12 +61,6 @@ namespace WinFormClient
         {
             chatPanel.Controls.Add(new OtherChat(msg, user));
         }
-
-        /*public void setUsername(List<string> users)
-        {
-            _userList = users;
-            
-        }*/
 
         private void UItimer_Tick(object sender, EventArgs e)
         {
@@ -95,10 +95,30 @@ namespace WinFormClient
         {
             gTimer.Start();
         }
-        
+
         public void setWord(string word)
         {
             wordLbl.Text = word;
+        }
+
+        // 폼의 KeyDown 이벤트 처리기
+        private void ChattingForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                SendMessage();
+                e.SuppressKeyPress = true; // 엔터 키 입력을 컨트롤에서 처리하지 않도록 설정
+            }
+        }
+
+        // txtInput 컨트롤의 KeyDown 이벤트 처리기
+        private void TxtInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                SendMessage();
+                e.SuppressKeyPress = true; // 엔터 키 입력을 텍스트박스에서 처리하지 않도록 설정
+            }
         }
     }
 }

@@ -148,7 +148,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(6);
             Name = "wordGuessing_citizen";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "MafiaGame";
             Load += wordGuessing_citizen_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxSun).EndInit();

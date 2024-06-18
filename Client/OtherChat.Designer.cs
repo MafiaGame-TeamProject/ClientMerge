@@ -80,7 +80,7 @@
             Controls.Add(otherLbl);
             Margin = new Padding(6);
             Name = "OtherChat";
-            Size = new Size(1175, 80);
+            Size = new Size(1160, 80);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

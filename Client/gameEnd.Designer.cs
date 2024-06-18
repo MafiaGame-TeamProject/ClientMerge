@@ -194,7 +194,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(6);
             Name = "gameEnd";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "MafiaGame";
             Load += gameEnd_Load;
             ResumeLayout(false);

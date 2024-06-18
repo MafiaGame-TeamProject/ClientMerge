@@ -52,7 +52,7 @@ namespace WinFormClient
             { // 시민 승리
                 lableWinner.Text = "시민팀이\n승리했습니다!";
                 labelUser.Text = "라이어: " + _liarName + " / 시민: " + _citizenName;
-                labelWord.Text = _realWord;
+                labelWord.Text = "제시어: " + _realWord;
             }
             else
             { // 라이어 승리
