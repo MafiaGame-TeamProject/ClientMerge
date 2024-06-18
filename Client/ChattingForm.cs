@@ -19,8 +19,8 @@ namespace WinFormClient
 
         List<string> _userList;
 
-        private int m = 0;
-        private int s = 5;
+        private int m = 1;
+        private int s = 30;
 
        
 

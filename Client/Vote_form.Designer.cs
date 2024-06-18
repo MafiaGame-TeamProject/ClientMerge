@@ -42,11 +42,11 @@
             timeLabel.BackColor = Color.Transparent;
             timeLabel.Font = new Font("휴먼둥근헤드라인", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
             timeLabel.ForeColor = Color.White;
-            timeLabel.Location = new Point(1079, 45);
+            timeLabel.Location = new Point(1087, 42);
             timeLabel.Name = "timeLabel";
-            timeLabel.Size = new Size(108, 39);
+            timeLabel.Size = new Size(17, 39);
             timeLabel.TabIndex = 1;
-            timeLabel.Text = "3:00";
+            timeLabel.Text = "\r\n";
             // 
             // label1
             // 

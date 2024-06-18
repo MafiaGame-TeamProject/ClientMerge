@@ -55,7 +55,7 @@
             labelUser.AutoSize = true;
             labelUser.Font = new Font("휴먼둥근헤드라인", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelUser.ForeColor = Color.White;
-            labelUser.Location = new Point(66, 230);
+            labelUser.Location = new Point(74, 231);
             labelUser.Margin = new Padding(6, 0, 6, 0);
             labelUser.Name = "labelUser";
             labelUser.Size = new Size(1161, 50);

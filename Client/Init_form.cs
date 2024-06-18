@@ -53,7 +53,7 @@ namespace WinFormClient
         private void Connected(object? sender, ChatLib.Events.ChatEventArgs e)
         {
             _clientHandler = e.ClientHandler;
-            
+
             chattingForm = new ChattingForm(_client, _clientHandler, UserName); // chattingForm instance 생성
         }
 
@@ -142,7 +142,7 @@ namespace WinFormClient
                         chattingForm.Hide();
                         voteFormShown = true;
                     }//chattingForm.setUsername(_user);
-                    
+
                 });
             }
 
@@ -167,7 +167,7 @@ namespace WinFormClient
                 this._liarAnswer = answer;
 
                 var wordGuessingCitizenForm = new wordGuessing_citizen(_client, _clientHandler, UserName, _words, _totalUsers, _liarAnswer);
-                wordGuessingCitizenForm .Show();
+                wordGuessingCitizenForm.Show();
                 voteResultForm.Hide();
             }
         }
@@ -182,13 +182,14 @@ namespace WinFormClient
 
             await _client.ConnectAsync(new ConnectionDetails
             {
-                RoomId = RoomId,
+                RoomId = this.RoomId,
                 UserName = UserName,
             });
 
             _clientHandler.Send(new ChatHub
             {
                 Message = "plzUserCount",
+                RoomId = this.RoomId,
             });
         }
 

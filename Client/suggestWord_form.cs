@@ -31,7 +31,7 @@ namespace SuggestedWord
         private string _userName;
         private List<string> _words;
         private ChattingForm _chattingForm;
-
+        private List<List<Image>> images = new();
 
         System.Windows.Forms.Label[] CardLable;
 
@@ -39,6 +39,103 @@ namespace SuggestedWord
         private readonly int cardHeight = 512;
         private readonly int sgtWidth = 104;
         private readonly int sgtHeight = 119;
+
+        public void InitializeImages()
+        {
+            string baseDirectory = Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName;
+            string relativePath = @"Resources";
+            string resourcesPath = Path.Combine(baseDirectory, relativePath);
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "1_apple.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "1_banana.png"))
+            });
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "2_baseball.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "2_soccer.png"))
+            });
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "3_dog.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "3_cat.png"))
+            });
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "4_piano.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "4_guitar.png"))
+            });
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "5_bicycle.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "5_motorcycle.png"))
+            });
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "6_carrot.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "6_onion.png"))
+            });
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "7_pen.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "7_note.png"))
+            });
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "8_doctor.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "8_firefighter.png"))
+            });
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "9_shirt.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "9_pants.png"))
+            });
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "10_hammer.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "10_screwdriver.png"))
+            });
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "11_train.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "11_ship.png"))
+            });
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "12_mouse.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "12_keyboard.png"))
+            });
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "13_desk.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "13_chair.png"))
+            });
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "14_candy.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "14_icecream.png"))
+            });
+
+            images.Add(new List<Image>
+            {
+                Image.FromFile(Path.Combine(resourcesPath, "15_tulip.png")),
+                Image.FromFile(Path.Combine(resourcesPath, "15_rose.png"))
+            });
+        }
 
         public static class ImageManager
         {
@@ -48,11 +145,8 @@ namespace SuggestedWord
 
             static ImageManager()
             {
-                // 프로젝트 루트 디렉토리를 가져옵니다.
                 string baseDirectory = Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName;
-                // 상대 경로를 설정합니다.
                 string relativePath = @"Resources";
-                // 전체 경로를 결합합니다.
                 string resourcesPath = Path.Combine(baseDirectory, relativePath);
 
                 CardFront = Image.FromFile(Path.Combine(resourcesPath, "Card_front.png"));
@@ -69,7 +163,7 @@ namespace SuggestedWord
             _userName = UserName;
             _words = words;
             _chattingForm = chattingForm;
-
+            InitializeImages();
             InitializeCardFlipComponents();
         }
 
@@ -98,7 +192,7 @@ namespace SuggestedWord
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.FromArgb(255, 209, 154),
-                Location = new Point(50, 10),
+                Location = new Point(50, 12),
                 Font = new Font("휴먼둥근헤드라인", 11)
             };
 
@@ -110,7 +204,7 @@ namespace SuggestedWord
                 BackColor = Color.Transparent,
                 ForeColor = Color.Black,
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(105, 190 * 2),
+                Location = new Point(105, 378),
                 Font = new Font("휴먼둥근헤드라인", 11)
             };
 
@@ -121,7 +215,7 @@ namespace SuggestedWord
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.FromArgb(255, 209, 154),
-                Location = new Point(25, 215 * 2),
+                Location = new Point(25, 430),
                 Font = new Font("휴먼둥근헤드라인", 7),
                 TextAlign = ContentAlignment.MiddleCenter,
             };
@@ -133,7 +227,7 @@ namespace SuggestedWord
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 ForeColor = Color.White,
-                Location = new Point(45, 230 * 2),
+                Location = new Point(45, 460),
                 Font = new Font("휴먼둥근헤드라인", 6),
                 TextAlign = ContentAlignment.MiddleCenter,
             };
@@ -150,9 +244,9 @@ namespace SuggestedWord
             {
                 Width = sgtWidth,
                 Height = sgtHeight,
-                Image = ImageManager.SuggestedPicture,
+                Image = _userName == _words[5] ? images[Convert.ToInt32(_words[0])][0] : images[Convert.ToInt32(_words[0])][1],
                 SizeMode = PictureBoxSizeMode.StretchImage,
-                Location = new Point((cardWidth - sgtWidth) / 2, (cardHeight - sgtHeight) / 2) // 중앙에 위치
+                Location = new Point((cardWidth - sgtWidth) / 2, ((cardHeight - sgtHeight) / 2) - 20) // 중앙에 위치
             };
 
             for (int i = 0; i < CardLable.Length; i++)

@@ -176,6 +176,7 @@ namespace Vote
 
             // 버튼 클릭 시 수행
             msg = labels[checkedIndex].Text;
+
             _clientHandler.Send(new ChatHub
             {
                 Message = "VOTED:" + msg,
@@ -183,6 +184,8 @@ namespace Vote
 
             isSend = true;
             pictureBoxButton.Enabled = false;
+
+            MessageBox.Show(labels[checkedIndex].Text + "가 투표되었습니다\n다른 사용자가 투표할 때 까지 기다려주세요");
         }
 
         private void UpdateButtonState()
