@@ -159,7 +159,7 @@
             Margin = new Padding(6);
             Name = "voteResult";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "MafiaGame";
+            Text = "LiarGame";
             Load += voteResult_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

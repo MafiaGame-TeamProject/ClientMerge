@@ -195,7 +195,7 @@
             Margin = new Padding(6);
             Name = "gameEnd";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "MafiaGame";
+            Text = "LiarGame";
             Load += gameEnd_Load;
             ResumeLayout(false);
             PerformLayout();

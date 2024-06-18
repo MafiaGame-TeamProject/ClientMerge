@@ -266,7 +266,7 @@
             Margin = new Padding(6);
             Name = "wordGuessing";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "MafiaGame";
+            Text = "LiarGame";
             Load += wordGuessing_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxTime).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSun).EndInit();

@@ -192,7 +192,7 @@
             Margin = new Padding(6);
             Name = "ChattingForm";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "MafiaGame";
+            Text = "LiarGame";
             Load += ChattingForm_Load;
             KeyDown += ChattingForm_KeyDown;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

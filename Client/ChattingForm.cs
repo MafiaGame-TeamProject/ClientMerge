@@ -19,7 +19,7 @@ namespace WinFormClient
 
         List<string> _userList;
 
-        private int m = 1;
+        private int m = 3;
         private int s = 0;
 
         public ChattingForm(ChatClient client, ClientHandler handler, string userName)

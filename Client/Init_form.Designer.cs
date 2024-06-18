@@ -153,7 +153,7 @@
             Name = "Init_form";
             Padding = new Padding(4, 64, 4, 4);
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MafiaGame";
+            Text = "LiarGame";
             Load += Init_form_Load;
             ((System.ComponentModel.ISupportInitialize)nudRoomId).EndInit();
             panel1.ResumeLayout(false);

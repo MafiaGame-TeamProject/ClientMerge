@@ -51,7 +51,7 @@
             Margin = new Padding(4);
             Name = "suggestWord_form";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "MafiaGame";
+            Text = "LiarGame";
             FormClosed += suggestWord_form_FormClosed;
             Load += Form1_Load;
             ResumeLayout(false);

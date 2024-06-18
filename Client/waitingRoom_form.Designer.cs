@@ -138,7 +138,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "waitingRoom_form";
             Padding = new Padding(3, 64, 3, 3);
-            Text = "MafiaGame";
+            Text = "LiarGame";
             FormClosed += waitingRoom_form_FormClosed;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)UsersView).EndInit();
