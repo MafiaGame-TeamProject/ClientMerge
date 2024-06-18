@@ -27,6 +27,7 @@ namespace WinFormClient
         string _citizenName; // 시민'들' 이름
         string _realWord; // 시민 제시어
         bool _whoWin; // 누가 이겼는지 여부(시민승: T / 라이어승: F)
+        string _topic;
 
         private int remainingTime = 15; // 15초
 
@@ -43,6 +44,7 @@ namespace WinFormClient
 
             _liarName = _word[5];
             _realWord = _word[3];
+            _topic = _word[1];
 
             for (int i = 0; i < 4; i++)
             {
@@ -98,7 +100,7 @@ namespace WinFormClient
                     if(_userName == _liarName)
                     {
                         //wordGuessing(ChatClient client, ClientHandler handler, string userName)
-                        var wordGuessingLiarForm = new wordGuessing(_client, _clientHandler, _userName);
+                        var wordGuessingLiarForm = new wordGuessing(_client, _clientHandler, _userName, _topic);
                         wordGuessingLiarForm.Show();
                         this.Hide();
                     }

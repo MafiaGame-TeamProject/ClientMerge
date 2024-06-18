@@ -20,13 +20,15 @@ namespace WinFormClient
         ChatClient _client;
         ClientHandler _clientHandler;
         string _userName;
+        string _topic;
 
-        public wordGuessing(ChatClient client, ClientHandler handler, string userName)
+        public wordGuessing(ChatClient client, ClientHandler handler, string userName, string topic)
         {
             InitializeComponent();
             _client = client;
             _clientHandler = handler;
             _userName = userName;
+            _topic = topic;
 
             timer1 = new System.Windows.Forms.Timer();
             timer1.Interval = 1000; // 1초 간격
@@ -66,6 +68,7 @@ namespace WinFormClient
         private void wordGuessing_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            labelWord.Text = _topic;
         }
     }
 }
